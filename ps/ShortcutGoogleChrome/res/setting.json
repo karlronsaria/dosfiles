@@ -1,0 +1,16 @@
+{
+    "AppLocation": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "DefaultProfileId": 0,
+    "Profiles": [
+        {
+            "Tags": [ "default", "novel" ],
+            "Id": 0,
+            "Mail": "kamenlou@gmail.com"
+        },
+        {
+            "Tags": [ "main", "personal" ],
+            "Id": 1,
+            "Mail": "andrew.mikedaniels@gmail.com"
+        }
+    ]
+}
