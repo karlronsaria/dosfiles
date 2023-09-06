@@ -3,14 +3,19 @@
     "DefaultProfileId": 0,
     "Profiles": [
         {
-            "Tags": [ "default", "novel" ],
+            "Tags": [ "default", "novel", "kamenlou" ],
             "Id": 0,
             "Mail": "kamenlou@gmail.com"
         },
         {
-            "Tags": [ "main", "personal" ],
+            "Tags": [ "main", "personal", "andrew" ],
             "Id": 1,
             "Mail": "andrew.mikedaniels@gmail.com"
+        },
+        {
+            "Tags": [ "emp", "cnladera" ],
+            "Id": 4,
+            "Mail": "cnladera@gmail.com"
         }
     ]
 }
