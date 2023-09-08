@@ -14,6 +14,12 @@ function Run-ShortcutGoogleChromeProfile {
         [String[]]
         $ProfileTags,
 
+        [ArgumentCompleter({
+            $setting = cat "$PsScriptRoot/../res/setting.json" `
+                | ConvertFrom-Json
+
+            return $setting.Profiles.Id
+        })]
         [Parameter(ParameterSetName = "ById")]
         [Int]
         $ProfileId
