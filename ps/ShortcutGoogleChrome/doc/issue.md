@@ -4,9 +4,10 @@
   - howto
     - ``../gchrome.bat``
   - actual
+    
     ```
     C:\Users\karlr> get-process | ? Name -like *chrome*
     C:\Users\karlr>
     ```
 
-[Go Back](../readme.md)
+[← Go Back](../readme.md)
