@@ -9,4 +9,5 @@ set "args=%args% --no-loop --no-repeat"
 set "args=%args% --no-media-library"
 set "args=%args% --no-playlist-tree"
 set "args=%args% --mouse-hide-timeout=0"
+set "args=%args%%*"
 "%app%" "%media%" %args%

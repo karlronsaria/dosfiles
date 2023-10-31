@@ -1,1 +1,1 @@
-@"%~dp0.\script\Run-VlcClip.bat" starfield
+@"%~dp0.\script\Run-VlcClip.bat" starfield %*
