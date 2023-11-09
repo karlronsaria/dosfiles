@@ -22,7 +22,8 @@ $WM_SETICON = 0x80
 $ICON_SMALL = 0
 
 function Main {
-    [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing") | Out-Null
+    [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing") |
+        Out-Null
 
     # Verify the file exists
     if (-not [System.IO.File]::Exists($IconFile)) {
@@ -44,9 +45,9 @@ function Main {
         return
     }
 
-    SendMessage $consoleHandle $WM_SETICON $ICON_SMALL $icon.Handle | Out-Null
+    SendMessage $consoleHandle $WM_SETICON $ICON_SMALL $icon.Handle |
+        Out-Null
 }
-
 
 ## Invoke a Win32 P/Invoke call.
 ## From: Lee Holmes
@@ -80,10 +81,16 @@ function Invoke-Win32 {
 
     ## karlr (2021_06_10)
     $assembly = if ($PsVersionTable.PsVersion.Major -ge 7) {
-        [System.Reflection.Emit.AssemblyBuilder]::DefineDynamicAssembly($name, 'Run')
+        [System.Reflection.Emit.AssemblyBuilder]::DefineDynamicAssembly(
+            $name,
+            'Run'
+        )
     }
     else {
-        [AppDomain]::CurrentDomain.DefineDynamicAssembly($name, 'Run')
+        [AppDomain]::CurrentDomain.DefineDynamicAssembly(
+            $name,
+            'Run'
+        )
     }
 
     $module = $assembly.DefineDynamicModule('PInvokeModule')
@@ -131,8 +138,13 @@ function Invoke-Win32 {
     }
 
     ## Apply the P/Invoke constructor
-    $ctor = [Runtime.InteropServices.DllImportAttribute].GetConstructor([string])
-    $attr = New-Object Reflection.Emit.CustomAttributeBuilder $ctor, $DllName
+    $ctor = [Runtime.InteropServices.DllImportAttribute].
+        GetConstructor([string])
+
+    $attr = New-Object `
+        Reflection.Emit.CustomAttributeBuilder `
+        $ctor, $DllName
+
     $method.SetCustomAttribute($attr)
 
     ## Create the temporary type, and invoke the method.
@@ -149,18 +161,33 @@ function Invoke-Win32 {
     ## Finally, go through all of the reference parameters, and update the
     ## values of the PSReference objects that the user passed in.
     foreach ($refParameter in $refParameters) {
-        $Parameters[$refParameter - 1].Value = $inputParameters[$refParameter - 1]
+        $Parameters[$refParameter - 1].Value =
+            $inputParameters[$refParameter - 1]
     }
 }
 
-function SendMessage([IntPtr] $hWnd, [Int32] $message, [Int32] $wParam, [Int32] $lParam) {
+function SendMessage(
+    [IntPtr] $hWnd,
+    [Int32] $message,
+    [Int32] $wParam,
+    [Int32] $lParam
+) {
     $ParameterTypes = [IntPtr], [Int32], [Int32], [Int32]
     $Parameters = $hWnd, $message, $wParam, $lParam
-    Invoke-Win32 "user32.dll" ([Int32]) "SendMessage" $ParameterTypes $Parameters
+
+    Invoke-Win32 `
+        "user32.dll" `
+        ([Int32]) `
+        "SendMessage" `
+        $ParameterTypes `
+        $Parameters
 }
 
 function GetConsoleWindow() {
-    Invoke-Win32 "kernel32" ([IntPtr]) "GetConsoleWindow"
+    Invoke-Win32 `
+        "kernel32" `
+        ([IntPtr]) `
+        "GetConsoleWindow"
 }
 
 . Main
