@@ -16,6 +16,11 @@
             "Tags": [ "emp", "cnladera" ],
             "Id": 5,
             "Mail": "cnladera@gmail.com"
+        },
+        {
+            "Tags": [ "cnfre", "oncampus" ],
+            "Id": 3,
+            "Mail": "cnfreoncampus@gmail.com"
         }
     ]
 }
