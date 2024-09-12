@@ -1,5 +1,5 @@
 @echo off
-set "modulePath=%~dp0\ps\ShortcutFfmpeg"
+set "modulePath=%~dp0\pwsh\ShortcutFfmpeg"
 
 if "%~1" EQU "" goto :eof
 

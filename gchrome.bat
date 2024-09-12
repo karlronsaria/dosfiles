@@ -1,6 +1,6 @@
 @echo off
 set "cmd=chrome.exe %*"
-set "modulePath=%~dp0\ps\ShortcutGoogleChrome"
+set "modulePath=%~dp0\pwsh\ShortcutGoogleChrome"
 
 if "%~1" EQU "-p" goto getNewCommand
 goto runCommand

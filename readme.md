@@ -1,7 +1,9 @@
 # dosfiles
+
 A collection of shortcut DOS files
 
 ## resources
+
 - ``4K_Space_Stock_Footage_Motion_Graphics_Background.gif``
   - link
     - YouTube.com
@@ -11,6 +13,7 @@ A collection of shortcut DOS files
     - retrieved: 2023_11_09
 
 ## modules
-- [ShortcutGoogleChrome](./ps/ShortcutGoogleChrome/readme.md)
-- [ShortcutFfmpeg](./ps/ShortcutFfmpeg/readme.md)
+
+- [ShortcutGoogleChrome](./pwsh/ShortcutGoogleChrome/readme.md)
+- [ShortcutFfmpeg](./pwsh/ShortcutFfmpeg/readme.md)
 
