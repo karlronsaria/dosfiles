@@ -17,3 +17,8 @@ A collection of shortcut DOS files
 - [ShortcutGoogleChrome](./pwsh/ShortcutGoogleChrome/readme.md)
 - [ShortcutFfmpeg](./pwsh/ShortcutFfmpeg/readme.md)
 
+---
+
+[Todo List](./doc/todo.md)
+[Wish List](./doc/wish.md)
+
