@@ -21,7 +21,7 @@ set "cmd=%cmd% -Name SystemDefault"
 goto :completeCmd
 
 :completeCmd
-set "cmd=%cmd% -Verbose ^| Out-Null""
+set "cmd=%cmd%""
 
 if "%~2" EQU "--whatif" goto :echo
 goto :execute
