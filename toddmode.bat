@@ -3,9 +3,13 @@
 if "%~1" EQU "--help" goto :help
 if "%~1" EQU "-h" goto :help
 
-set "cmd=pwsh -Command ""
-set "cmd=%cmd%Import-DemandModule theme, mouse, pointer -Mode And"
-set "cmd=%cmd%; Set-MousePointerTheme"
+set "app=pwsh"
+set "sysWalls=dir '%windir%/Web/*.jpg' -Recurse"
+set "myWalls=dir '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready'"
+
+set "cmd=%app% -Command ""
+set "cmd=%cmd%Import-DemandModule PsFrivolous, theme -Mode And"
+set "cmd=%cmd%; $null = Set-MousePointerTheme"
 
 if "%~1" EQU "" goto :setToddMode
 if "%~1" EQU "--on" goto :setToddMode
@@ -13,14 +17,17 @@ if "%~1" EQU "--off" goto :setDefaultMode
 goto :notImplemented
 
 :setToddMode
+set "walls=%myWalls%"
 set "cmd=%cmd% -Name ToddMode"
 goto :completeCmd
 
 :setDefaultMode
+set "walls=%sysWalls%"
 set "cmd=%cmd% -Name SystemDefault"
 goto :completeCmd
 
 :completeCmd
+set "cmd=%cmd%; $null = %walls% ^^^| Get-Random ^^^| foreach { $_.FullName } ^^^| Set-Wallpaper"
 set "cmd=%cmd%""
 
 if "%~2" EQU "--whatif" goto :echo
