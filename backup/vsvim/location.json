@@ -1,0 +1,12 @@
+{
+    "Locations": [
+        {
+            "Name": "VsVim Configuration Settings",
+            "Tag": [
+                "vim", "vsvim", "visual", "studio", "extension"
+            ],
+            "Where": "%UserProfile%"
+        }
+    ]
+}
+
