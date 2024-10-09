@@ -17,6 +17,11 @@ A collection of shortcut DOS files
 - [ShortcutGoogleChrome](./pwsh/ShortcutGoogleChrome/readme.md)
 - [ShortcutFfmpeg](./pwsh/ShortcutFfmpeg/readme.md)
 
+## task
+
+- [backup winget](./backup/winget/readme.md)
+- [backup choco](./backup/choco/readme.md)
+
 ---
 
 [Todo List](./doc/todo.md)

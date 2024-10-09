@@ -1,13 +1,19 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-09-18T06:01:50.488-00:00",
+	"CreationDate" : "2024-10-09T02:51:20.628-00:00",
 	"Sources" : 
 	[
 		{
 			"Packages" : 
 			[
 				{
+					"PackageIdentifier" : "CoreyButler.NVMforWindows"
+				},
+				{
 					"PackageIdentifier" : "7zip.7zip"
+				},
+				{
+					"PackageIdentifier" : "Audacity.Audacity"
 				},
 				{
 					"PackageIdentifier" : "AutoHotkey.AutoHotkey"
@@ -31,6 +37,9 @@
 					"PackageIdentifier" : "Microsoft.OneDrive"
 				},
 				{
+					"PackageIdentifier" : "Unity.Unity.2022"
+				},
+				{
 					"PackageIdentifier" : "Unity.Unity.6000"
 				},
 				{
@@ -38,6 +47,9 @@
 				},
 				{
 					"PackageIdentifier" : "VideoLAN.VLC"
+				},
+				{
+					"PackageIdentifier" : "vim.vim"
 				},
 				{
 					"PackageIdentifier" : "DigitalScholar.Zotero"
@@ -52,10 +64,25 @@
 					"PackageIdentifier" : "Musescore.Musescore"
 				},
 				{
+					"PackageIdentifier" : "Amazon.Corretto.21.JDK"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.OpenJDK.17"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
 				},
 				{
 					"PackageIdentifier" : "Inkscape.Inkscape"
+				},
+				{
+					"PackageIdentifier" : "equalsraf.neovim-qt"
+				},
+				{
+					"PackageIdentifier" : "TheDocumentFoundation.LibreOffice"
+				},
+				{
+					"PackageIdentifier" : "calibre.calibre"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.CLRTypesSQLServer.2019"
@@ -67,19 +94,37 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
 				},
 				{
-					"PackageIdentifier" : "Google.Chrome"
+					"PackageIdentifier" : "Alacritty.Alacritty"
+				},
+				{
+					"PackageIdentifier" : "StrawberryPerl.StrawberryPerl"
+				},
+				{
+					"PackageIdentifier" : "Oracle.JavaRuntimeEnvironment"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WebDeploy"
 				},
 				{
+					"PackageIdentifier" : "Google.Chrome"
+				},
+				{
 					"PackageIdentifier" : "BlenderFoundation.Blender"
+				},
+				{
+					"PackageIdentifier" : "GoLang.Go"
 				},
 				{
 					"PackageIdentifier" : "SlackTechnologies.Slack"
 				},
 				{
+					"PackageIdentifier" : "DEVCOM.Lua"
+				},
+				{
 					"PackageIdentifier" : "RevoUninstaller.RevoUninstaller"
+				},
+				{
+					"PackageIdentifier" : "Starship.Starship"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.PowerShell"
@@ -94,6 +139,12 @@
 					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community"
 				},
 				{
+					"PackageIdentifier" : "Amazon.Kindle"
+				},
+				{
+					"PackageIdentifier" : "LLVM.LLVM"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.Edge"
 				},
 				{
@@ -103,10 +154,10 @@
 					"PackageIdentifier" : "OBSProject.OBSStudio"
 				},
 				{
-					"PackageIdentifier" : "Valve.Steam"
+					"PackageIdentifier" : "RubyInstallerTeam.Ruby.3.2"
 				},
 				{
-					"PackageIdentifier" : "Unity.Unity.2022"
+					"PackageIdentifier" : "Valve.Steam"
 				},
 				{
 					"PackageIdentifier" : "KDE.Kdenlive"
@@ -115,7 +166,7 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.8"
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
@@ -127,7 +178,13 @@
 					"PackageIdentifier" : "Mojang.MinecraftLauncher"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2005.x86"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
 				},
 				{
 					"PackageIdentifier" : "WestWind.MarkdownMonster"
@@ -139,6 +196,9 @@
 					"PackageIdentifier" : "Python.Launcher"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.DotNet.SDK.8"
+				},
+				{
 					"PackageIdentifier" : "MarkText.MarkText"
 				},
 				{
@@ -148,10 +208,22 @@
 					"PackageIdentifier" : "GnuWin32.Which"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerToys"
+					"PackageIdentifier" : "Julialang.Julia"
+				},
+				{
+					"PackageIdentifier" : "Rustlang.Rustup"
+				},
+				{
+					"PackageIdentifier" : "SQLite.SQLite"
+				},
+				{
+					"PackageIdentifier" : "Roblox.Roblox"
 				},
 				{
 					"PackageIdentifier" : "Python.Python.3.12"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerToys"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.AppInstaller"
@@ -167,6 +239,12 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WindowsTerminal"
+				},
+				{
+					"PackageIdentifier" : "TheBrowserCompany.Arc"
+				},
+				{
+					"PackageIdentifier" : "Debian.Debian"
 				}
 			],
 			"SourceDetails" : 

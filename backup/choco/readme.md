@@ -12,3 +12,7 @@ choco export
 choco install .\packages.config
 ```
 
+---
+
+[← Go Back](../../readme.md)
+
