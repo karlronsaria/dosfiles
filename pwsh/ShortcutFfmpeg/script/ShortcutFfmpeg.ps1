@@ -8,7 +8,7 @@ function Convert-Ffmpeg {
         $To
     )
 
-    $setting = cat "$PsScriptRoot/../res/setting.json" `
+    $setting = Get-Content "$PsScriptRoot/../res/setting.json" `
         | ConvertFrom-Json
 
     $app = $setting.AppLocation

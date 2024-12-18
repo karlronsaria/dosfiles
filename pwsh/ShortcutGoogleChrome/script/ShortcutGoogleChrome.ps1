@@ -6,7 +6,7 @@ function Run-ShortcutGoogleChromeProfile {
             Position = 0
         )]
         [ArgumentCompleter({
-            $setting = cat "$PsScriptRoot/../res/setting.json" `
+            $setting = Get-Content "$PsScriptRoot/../res/setting.json" `
                 | ConvertFrom-Json
 
             return $setting.Profiles.Tags
@@ -15,7 +15,7 @@ function Run-ShortcutGoogleChromeProfile {
         $ProfileTags,
 
         [ArgumentCompleter({
-            $setting = cat "$PsScriptRoot/../res/setting.json" `
+            $setting = Get-Content "$PsScriptRoot/../res/setting.json" `
                 | ConvertFrom-Json
 
             return $setting.Profiles.Id
@@ -51,7 +51,7 @@ function Run-ShortcutGoogleChromeProfile {
         return "& `"$AppLocation`" --args --profile-directory=`"$ProfileName`""
     }
 
-    $setting = cat "$PsScriptRoot/../res/setting.json" `
+    $setting = Get-Content "$PsScriptRoot/../res/setting.json" `
         | ConvertFrom-Json
 
     if ($PsCmdlet.ParameterSetName -eq "ByTags") {
