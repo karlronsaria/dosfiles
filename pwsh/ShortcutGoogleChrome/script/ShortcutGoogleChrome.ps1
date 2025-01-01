@@ -22,7 +22,13 @@ function Run-ShortcutGoogleChromeProfile {
         })]
         [Parameter(ParameterSetName = "ById")]
         [Int]
-        $ProfileId
+        $ProfileId,
+
+        [Switch]
+        $DebugMode,
+
+        [Switch]
+        $ShowCommand
     )
 
     function ConvertTo-ShortcutGoogleChromeProfileName {
@@ -78,5 +84,52 @@ function Run-ShortcutGoogleChromeProfile {
         -AppLocation $setting.AppLocation `
         -ProfileName $profileName
 
-    return iex $command
+    if ($DebugMode) {
+        $command = "$command --remote-debugging-port=$($setting.RemoteDebuggingPort)"
+    }
+
+    return $(if ($ShowCommand) {
+        $command
+    }
+    else {
+        iex $command
+    })
 }
+
+function Stop-ShortcutGoogleChrome {
+    $setting = Get-Item "$PsScriptRoot/../res/setting.json" |
+        Get-Content |
+        ConvertFrom-Json
+
+    $dateTime = Get-Date -Format "yyyy_MM_dd_HHmmss"
+    $filePath = "~/session_-_$($dateTime)_google-chrome-interrupt.onetab"
+    $response = Invoke-RestMethod `
+        -Uri "http://127.0.0.1:$($setting.RemoteDebuggingPort)/json" `
+        -ErrorAction Continue
+
+    if ($response) {
+        $links = $response |
+        foreach {
+            $_.Url
+        } |
+        where {
+            $_ -notmatch "^chrome|https?://ogs\.google\.com"
+        }
+
+        $links |
+        Out-File `
+            -FilePath $filePath `
+            -Encoding utf8
+    }
+
+    taskkill /f /im chrome.exe
+
+    if ($response) {
+        "`nNew file: $($filePath)`n"
+        $links
+    }
+    else {
+        "`nNo sessions could be saved"
+    }
+}
+

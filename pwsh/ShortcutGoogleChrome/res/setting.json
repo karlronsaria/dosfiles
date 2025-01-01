@@ -1,6 +1,7 @@
 {
     "AppLocation": "C:/Program Files/Google/Chrome/Application/chrome.exe",
     "DefaultProfileId": 0,
+    "RemoteDebuggingPort": "9222",
     "Profiles": [
         {
             "Tags": [ "default", "novel", "kamenlou" ],

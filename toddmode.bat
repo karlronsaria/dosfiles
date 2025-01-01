@@ -3,12 +3,16 @@
 if "%~1" EQU "--help" goto :help
 if "%~1" EQU "-h" goto :help
 
-set "app=pwsh"
+set "cmd=pwsh"
 set "sysWalls=dir '%windir%/Web/*.jpg' -Recurse"
 set "myWalls=dir '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready'"
 
-set "cmd=%app% -Command ""
-set "cmd=%cmd%Import-DemandModule PsFrivolous, theme -Mode And"
+:: :: (karlr 2024_12_24)
+set "cmd=%cmd% -NoProfile "
+set "cmd=%cmd% -Command ""
+:: :: (karlr 2024_12_24)
+:: set "cmd=%cmd%Import-DemandModule PsFrivolous, theme -Mode And"
+set "cmd=%cmd%. %OneDrive%\Documents\WindowsPowerShell\Scripts\PsFrivolous\demand\Theme.ps1"
 set "cmd=%cmd%; $null = Set-MousePointerTheme"
 
 if "%~1" EQU "" goto :setToddMode
