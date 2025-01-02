@@ -133,3 +133,26 @@ function Stop-ShortcutGoogleChrome {
     }
 }
 
+function Open-ShortcutGoogleChromeSession {
+    Param(
+        $FilePath
+    )
+
+    if (-not (Test-Path $FilePath)) {
+        return
+    }
+
+    $setting = Get-Content "$PsScriptRoot/../res/setting.json" `
+        | ConvertFrom-Json
+
+    Get-Item $FilePath |
+    Get-Content |
+    where { $_ } |
+    foreach {
+        $url = [regex]::Match($_, "[^|]+").Value
+        Start-Process `
+            -FilePath $setting.AppLocation `
+            -ArgumentList $url
+    }
+}
+
