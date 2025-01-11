@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-01-11T03:14:34.977-00:00",
+	"CreationDate" : "2024-12-10T04:43:45.313-00:00",
 	"Sources" : 
 	[
 		{
@@ -17,9 +17,6 @@
 				},
 				{
 					"PackageIdentifier" : "AutoHotkey.AutoHotkey"
-				},
-				{
-					"PackageIdentifier" : "Docker.DockerDesktop"
 				},
 				{
 					"PackageIdentifier" : "Git.Git"
@@ -64,22 +61,22 @@
 					"PackageIdentifier" : "Microsoft.msodbcsql.17"
 				},
 				{
+					"PackageIdentifier" : "dotPDN.PaintDotNet"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
 				},
 				{
 					"PackageIdentifier" : "equalsraf.neovim-qt"
 				},
 				{
-					"PackageIdentifier" : "Oracle.MySQLWorkbench"
-				},
-				{
-					"PackageIdentifier" : "Google.Chrome"
-				},
-				{
 					"PackageIdentifier" : "Inkscape.Inkscape"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.CLRTypesSQLServer.2019"
+				},
+				{
+					"PackageIdentifier" : "Oracle.MySQLWorkbench"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
@@ -91,10 +88,13 @@
 					"PackageIdentifier" : "StrawberryPerl.StrawberryPerl"
 				},
 				{
+					"PackageIdentifier" : "BlenderFoundation.Blender"
+				},
+				{
 					"PackageIdentifier" : "Oracle.JavaRuntimeEnvironment"
 				},
 				{
-					"PackageIdentifier" : "calibre.calibre"
+					"PackageIdentifier" : "SlackTechnologies.Slack"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WebDeploy"
@@ -103,7 +103,7 @@
 					"PackageIdentifier" : "Microsoft.OpenJDK.17"
 				},
 				{
-					"PackageIdentifier" : "BlenderFoundation.Blender"
+					"PackageIdentifier" : "GoLang.Go"
 				},
 				{
 					"PackageIdentifier" : "DEVCOM.Lua"
@@ -118,7 +118,7 @@
 					"PackageIdentifier" : "Amazon.Corretto.21.JDK"
 				},
 				{
-					"PackageIdentifier" : "Oracle.VirtualBox"
+					"PackageIdentifier" : "calibre.calibre"
 				},
 				{
 					"PackageIdentifier" : "Starship.Starship"
@@ -127,22 +127,16 @@
 					"PackageIdentifier" : "Alacritty.Alacritty"
 				},
 				{
-					"PackageIdentifier" : "SlackTechnologies.Slack"
-				},
-				{
 					"PackageIdentifier" : "valinet.ExplorerPatcher"
-				},
-				{
-					"PackageIdentifier" : "GoLang.Go"
-				},
-				{
-					"PackageIdentifier" : "dotPDN.PaintDotNet"
 				},
 				{
 					"PackageIdentifier" : "TheDocumentFoundation.LibreOffice"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
+				},
+				{
+					"PackageIdentifier" : "Google.Chrome"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community"
@@ -184,10 +178,10 @@
 					"PackageIdentifier" : "Mojang.MinecraftLauncher"
 				},
 				{
-					"PackageIdentifier" : "Python.Launcher"
+					"PackageIdentifier" : "Microsoft.VCRedist.2005.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2005.x86"
+					"PackageIdentifier" : "Python.Launcher"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
@@ -211,9 +205,6 @@
 					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.8"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
 				},
 				{
@@ -224,9 +215,6 @@
 				},
 				{
 					"PackageIdentifier" : "DenoLand.Deno"
-				},
-				{
-					"PackageIdentifier" : "Discord.Discord"
 				},
 				{
 					"PackageIdentifier" : "GnuWin32.Which"
@@ -248,9 +236,6 @@
 				},
 				{
 					"PackageIdentifier" : "Roblox.Roblox"
-				},
-				{
-					"PackageIdentifier" : "Python.Python.3.13"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.PowerToys"

@@ -1,0 +1,28 @@
+{
+    "Packages": [
+        {
+            "Id": "GrayJay",
+            "Type": "Application",
+            "Description": "GrayJay Desktop",
+            "Link": {
+                "Url": [
+                    "https://grayjay.app/desktop/"
+                ],
+                "Retrieved": "2024_12_19"
+            }
+        },
+        {
+            "Id": "SoH",
+            "Type": "Application",
+            "Description": "ShipOfHarkinian",
+            "Link": {
+                "Url": [
+                    "https://github.com/HarbourMasters/Shipwright",
+                    "https://github.com/HarbourMasters/Shipwright/releases",
+                    "https://www.shipofharkinian.com/"
+                ],
+                "Retrieved": "2025-01-11T00:52:14.4606764-08:00"
+            }
+        }
+    ]
+}
