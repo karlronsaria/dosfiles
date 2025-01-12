@@ -1,0 +1,32 @@
+{
+    "WebProfile": {
+        "Ssid": "",
+        "Password": ""
+    },
+    "Users": [
+        {
+            "Name": "",
+            "Password": "",
+            "Type": "User"
+        },
+        {
+            "Name": "Admin",
+            "Password": "",
+            "Type": "Admin"
+        }
+    ],
+    "Packages": [
+        "sudo",
+        "googlechrome",
+        "everything",
+        "github-desktop",
+        "python3",
+        "minecraft-launcher",
+        "minecraft-education",
+        "7zip",
+        "paint.net",
+        "vscode",
+        "cura"
+    ]
+}
+

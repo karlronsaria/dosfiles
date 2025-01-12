@@ -1,0 +1,40 @@
+{
+    "UnityVersion": "2022.3.11f1",
+    "ProjectsPath": "\"$env:UserProfile\\MyUnity\"",
+    "TemplatesPath": "\"$env:ProgramFiles\\Unity\\Hub\\Editor\\$($_.UnityVersion)\\Editor\\Data\\Resources\\PackageManager\\ProjectTemplates\"",
+    "ArchiveExtension": ".tgz",
+    "RequestEdit": [
+        "package/package.json"
+    ],
+    "Replace": [
+        {
+            "Source": "Assets",
+            "Destination": "package/ProjectData~/Assets"
+        },
+        {
+            "Source": "Packages",
+            "Destination": "package/ProjectData~/Packages"
+        }
+    ],
+    "__OLD": [
+        {
+            "DateTime": "2023_12_28_220837",
+            "Value": {
+                "Replace": [
+                    {
+                        "Source": "Library/Artifacts",
+                        "Destination": "package/ProjectData~/Library/Artifacts"
+                    },
+                    {
+                        "Source": "Library/ArtifactsDB",
+                        "Destination": "package/ProjectData~/Library/ArtifactsDB"
+                    },
+                    {
+                        "Source": "Library/SourceAssetDB",
+                        "Destination": "package/ProjectData~/Library/SourceAssetDB"
+                    }
+                ]
+            }
+        }
+    ]
+}
