@@ -3,9 +3,10 @@
 if "%~1" EQU "--help" goto :help
 if "%~1" EQU "-h" goto :help
 
-set "cmd=pwsh"
+set "cmd=sudo pwsh"
 set "sysWalls=dir '%windir%/Web/*.jpg' -Recurse"
 set "myWalls=dir '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready'"
+set "myArrow='C:/shortcut/dos/res/toddhoward/emote/todd-emote-color.ico'"
 
 :: :: (karlr 2024_12_24)
 set "cmd=%cmd% -NoProfile "
@@ -22,15 +23,20 @@ goto :notImplemented
 
 :setToddMode
 set "walls=%myWalls%"
-set "cmd=%cmd% -Name ToddMode"
+set "cmd=%cmd%; $null = Set-MousePointerTheme -Name ToddMode"
+set "cmd=%cmd%; $null = Rename-DesktopItem -Special RecycleBin -NewName 'Not Skyrim'"
+set "cmd=%cmd%; $null = Set-ShortcutIconOverlay -FilePath %myArrow%"
 goto :completeCmd
 
 :setDefaultMode
 set "walls=%sysWalls%"
-set "cmd=%cmd% -Name SystemDefault"
+set "cmd=%cmd%; $null = Set-MousePointerTheme -Name SystemDefault"
+set "cmd=%cmd%; $null = Rename-DesktopItem -Special RecycleBin -NewName 'Recycle Bin'"
+set "cmd=%cmd%; $null = Set-ShortcutIconOverlay"
 goto :completeCmd
 
 :completeCmd
+set "cmd=%cmd% -RestartExplorer"
 set "cmd=%cmd%; $null = %walls% ^^^| Get-Random ^^^| foreach { $_.FullName } ^^^| Set-Wallpaper"
 set "cmd=%cmd%""
 
