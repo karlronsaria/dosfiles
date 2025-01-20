@@ -6,7 +6,7 @@ if "%~1" EQU "-h" goto :help
 set "cmd=sudo pwsh"
 set "sysWalls=dir '%windir%/Web/*.jpg' -Recurse"
 set "myWalls=dir '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready'"
-set "myArrow='C:/shortcut/dos/res/toddhoward/emote/todd-emote-color.ico'"
+set "myArrow='C:/shortcut/dos/res/toddhoward/emote/todd-emote-color-wide.ico'"
 
 :: :: (karlr 2024_12_24)
 set "cmd=%cmd% -NoProfile "

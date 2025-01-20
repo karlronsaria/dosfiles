@@ -3,7 +3,7 @@
 @echo off
 
 set "module=%OneDrive%\Documents\WindowsPowerShell\Scripts\PsTool\demand\ImageConvert.ps1"
-set "cmd=powershell"
+set "cmd=pwsh"
 set "cmd=%cmd% -NoProfile"
 set "cmd=%cmd% -Command """
 set "cmd=%cmd%. '%module%'"
