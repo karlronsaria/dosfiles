@@ -38,7 +38,7 @@ goto :completeCmd
 :completeCmd
 set "cmd=%cmd% -RestartExplorer"
 set "cmd=%cmd%; $null = %walls% ^^^| Get-Random ^^^| foreach { $_.FullName } ^^^| Set-Wallpaper"
-set "cmd=%cmd% -Style Fill""
+set "cmd=%cmd%""
 
 if "%~2" EQU "--whatif" goto :echo
 goto :execute
