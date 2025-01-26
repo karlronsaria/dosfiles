@@ -1,28 +1,61 @@
 {
     "Packages": [
         {
+            "Id": "BarrierTrio/Cardsauce",
+            "Type": "Library",
+            "Description": "A Balatro mod made for Vinesauce!",
+            "Link": {
+                "Url": [
+                    "https://github.com/BarrierTrio/Cardsauce"
+                ],
+                "Retrieved": "2025_01_24"
+            }
+        },
+        {
+            "Id": "Steamodded/smods",
+            "Type": "Library",
+            "Description": "A mod loader and injector for the game Balatro",
+            "Link": {
+                "Url": [
+                    "https://github.com/Steamodded/smods"
+                ],
+                "Retrieved": "2025_01_24"
+            }
+        },
+        {
+            "Id": "ethangreen-dev/lovely-injector",
+            "Type": "Library",
+            "Description": "A runtime lua injector for games built with LÖVE",
+            "Link": {
+                "Url": [
+                    "https://github.com/ethangreen-dev/lovely-injector"
+                ],
+                "Retrieved": "2025_01_24"
+            }
+        },
+        {
             "Id": "GrayJay",
             "Type": "Application",
             "Description": "GrayJay Desktop",
             "Link": {
                 "Url": [
-                    "https://grayjay.app/desktop/"
+                    "https://grayjay.app/desktop"
                 ],
                 "Retrieved": "2024_12_19"
             }
         },
         {
-            "Id": "SoH",
+            "Id": "HarbourMasters/Shipwright",
             "Type": "Application",
-            "Description": "ShipOfHarkinian",
+            "Description": "ShipOfHarkinian (SoH)",
             "Link": {
                 "Url": [
                     "https://github.com/HarbourMasters/Shipwright",
-                    "https://github.com/HarbourMasters/Shipwright/releases",
-                    "https://www.shipofharkinian.com/"
+                    "https://www.shipofharkinian.com"
                 ],
-                "Retrieved": "2025-01-11T00:52:14.4606764-08:00"
+                "Retrieved": "2025_01_11"
             }
         }
     ]
 }
+

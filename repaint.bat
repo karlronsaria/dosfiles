@@ -11,21 +11,21 @@ goto :notImplemented
 :systemdefault
 set "walls=dir '%windir%/Web/*.jpg' -Recurse"
 set "pointer=SystemDefault"
-set "arrow="
+set "arrows="
 set "recyclebin=Recycle Bin"
 goto :setcmd
 
 :toddmode
-set "walls=dir '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready'"
+set "walls=Get-ChildItem '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready'"
 set "pointer=ToddMode"
-set "arrow= -FilePath 'C:/shortcut/dos/res/toddhoward/emote/todd-emote-color-wide.ico'"
+set "arrows= -FilePath (dir 'C:/shortcut/dos/res/toddhoward/emote/*.ico' _bar_ Get-Random)"
 set "recyclebin=Not Skyrim"
 goto :setcmd
 
 :vinnymode
-set "walls=dir '%UserProfile%/Downloads/__OTHER/vinny/pic/wallready'"
+set "walls=Get-ChildItem '%UserProfile%/Downloads/__OTHER/vinny/pic/wallready'"
 set "pointer=VinnyMode"
-set "arrow= -FilePath 'C:/shortcut/dos/res/vinesauce/ico/vinny-point-extend.ico'"
+set "arrows= -FilePath (dir 'C:/shortcut/dos/res/vinesauce/ico/*.ico' _bar_ Get-Random)"
 set "recyclebin=Action 52"
 goto :setcmd
 
@@ -39,19 +39,19 @@ set "cmd=%cmd% -Command ""
 set "cmd=%cmd%. %OneDrive%\Documents\WindowsPowerShell\Scripts\PsFrivolous\demand\Theme.ps1"
 set "cmd=%cmd%; $null = Set-MousePointerTheme -Name %pointer%"
 set "cmd=%cmd%; $null = Rename-DesktopItem -Special RecycleBin -NewName '%recyclebin%'"
-set "cmd=%cmd%; $null = Set-ShortcutIconOverlay%arrow% -Force -RestartExplorer"
-set "cmd=%cmd%; $null = %walls% ^^^| Get-Random ^^^| foreach { $_.FullName } ^^^| Set-Wallpaper"
+set "cmd=%cmd%; $null = Set-ShortcutIconOverlay%arrows% -Force -RestartExplorer"
+set "cmd=%cmd%; $null = %walls% _bar_ Get-Random _bar_ foreach { $_.FullName } _bar_ Set-Wallpaper"
 set "cmd=%cmd%""
 
 if "%~2" EQU "--whatif" goto :echo
 goto :execute
 
 :echo
-echo %cmd%
+echo %cmd:_bar_=|%
 exit /b
 
 :execute
-%cmd%
+%cmd:_bar_=|%
 exit /b
 
 :notImplemented

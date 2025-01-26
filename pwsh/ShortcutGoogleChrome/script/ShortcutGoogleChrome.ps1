@@ -1,6 +1,10 @@
 function Run-ShortcutGoogleChromeProfile {
     [CmdletBinding(DefaultParameterSetName = "ByTags")]
     Param(
+        [Parameter(ValueFromPipeline = $true)]
+        [String[]]
+        $Url,
+
         [Parameter(
             ParameterSetName = "ByTags",
             Position = 0
@@ -31,6 +35,7 @@ function Run-ShortcutGoogleChromeProfile {
         $ShowCommand
     )
 
+Begin {
     function ConvertTo-ShortcutGoogleChromeProfileName {
         Param(
             [Int]
@@ -88,12 +93,23 @@ function Run-ShortcutGoogleChromeProfile {
         $command = "$command --remote-debugging-port=$($setting.RemoteDebuggingPort)"
     }
 
+    $urls = ""
+}
+
+Process {
+    $urls += ' ' + (($Url | foreach { "`"${psitem}`"" }) -join ' ')
+}
+
+End {
+    $command = "$command$urls"
+
     return $(if ($ShowCommand) {
         $command
     }
     else {
         iex $command
     })
+}
 }
 
 function Stop-ShortcutGoogleChrome {
