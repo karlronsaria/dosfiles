@@ -1,0 +1,11 @@
+C:\Users\karlr\AppData\Roaming\npm
++-- @georgesg/arc-cli@0.1.2
++-- expo-cli@6.3.12
++-- generator-code@1.11.4
++-- js-beautify@1.15.1
++-- neovim@5.2.1
++-- pdf.js@0.1.0
++-- tree-sitter-cli@0.23.0
++-- typescript@5.6.3
+`-- yo@5.0.0
+

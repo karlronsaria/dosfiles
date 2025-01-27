@@ -1,5 +1,8 @@
 @echo off
 
+set "wtsettingsloc=%LocalAppData%/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
+set "wtbackuploc=%~dp0./backup/winterminal"
+
 if "%~1" EQU "--help" goto :help
 if "%~1" EQU "-h" goto :help
 if "%~1" EQU "todd" goto :toddmode
@@ -13,20 +16,23 @@ set "walls=dir '%windir%/Web/*.jpg' -Recurse"
 set "pointer=SystemDefault"
 set "arrows="
 set "recyclebin=Recycle Bin"
+set "wtsettings=no-image.json"
 goto :setcmd
 
 :toddmode
-set "walls=Get-ChildItem '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready'"
+set "walls=dir '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready/*.*'"
 set "pointer=ToddMode"
 set "arrows= -FilePath (dir 'C:/shortcut/dos/res/toddhoward/emote/*.ico' _bar_ Get-Random)"
 set "recyclebin=Not Skyrim"
+set "wtsettings=toddhoward.json"
 goto :setcmd
 
 :vinnymode
-set "walls=Get-ChildItem '%UserProfile%/Downloads/__OTHER/vinny/pic/wallready'"
+set "walls=dir '%UserProfile%/Downloads/__OTHER/vinny/pic/wallready/*.*'"
 set "pointer=VinnyMode"
 set "arrows= -FilePath (dir 'C:/shortcut/dos/res/vinesauce/ico/*.ico' _bar_ Get-Random)"
 set "recyclebin=Action 52"
+set "wtsettings=toddhoward.json"
 goto :setcmd
 
 :setcmd
@@ -39,8 +45,10 @@ set "cmd=%cmd% -Command ""
 set "cmd=%cmd%. %OneDrive%\Documents\WindowsPowerShell\Scripts\PsFrivolous\demand\Theme.ps1"
 set "cmd=%cmd%; $null = Set-MousePointerTheme -Name %pointer%"
 set "cmd=%cmd%; $null = Rename-DesktopItem -Special RecycleBin -NewName '%recyclebin%'"
-set "cmd=%cmd%; $null = Set-ShortcutIconOverlay%arrows% -Force -RestartExplorer"
+set "cmd=%cmd%; $null = Set-ShortcutIconOverlay%arrows% -RestartExplorer -Force"
 set "cmd=%cmd%; $null = %walls% _bar_ Get-Random _bar_ foreach { $_.FullName } _bar_ Set-Wallpaper"
+set "cmd=%cmd%; $null = Copy-Item '%wtsettingsloc%/settings.json' -Dest "%wtbackuploc%/__OLD/wtsettings_-_$(Get-Date -f yyyy_MM_dd_HHmmss).json" -Force"
+set "cmd=%cmd%; $null = Copy-Item "%wtbackuploc%/%wtsettings%" -Dest '%wtsettingsloc%/settings.json' -Force"
 set "cmd=%cmd%""
 
 if "%~2" EQU "--whatif" goto :echo
