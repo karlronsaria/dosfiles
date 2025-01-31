@@ -179,6 +179,16 @@
                 "hidden": true,
                 "name": "Visual Studio Debug Console",
                 "source": "VSDebugConsole"
+            },
+            {
+                "backgroundImage": "",
+                "backgroundImageOpacity": 1,
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "hidden": false,
+                "name": "Capture Prompt",
+                "opacity": 100,
+                "cursorColor": "#000000",
+                "cursorHeight": 1
             }
         ]
     },
