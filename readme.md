@@ -22,6 +22,7 @@ A collection of shortcut DOS files
 - [backup winget](./backup/winget/readme.md)
 - [backup choco](./backup/choco/readme.md)
 - [backup go](./backup/go/readme.md)
+- [backup python](./backup/py/readme.md)
 
 ---
 

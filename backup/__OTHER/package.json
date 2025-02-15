@@ -1,6 +1,39 @@
 {
     "Packages": [
         {
+            "Id": "Pyrochild/Plugins",
+            "Type": "Library",
+            "Description": "Plugin/extension pack for Paint.NET, made by pyrochild (2007, maintained as of 2020-11-21), needed in order to make outline-text images",
+            "Link": {
+                "Url": [
+                    "https://forums.getpaint.net/topic/7291-pyrochild-plugins-2020-11-21/"
+                ],
+                "Retrieved": "2025_02_14"
+            }
+        },
+        {
+            "Id": "Anituner",
+            "Type": "Application",
+            "Description": "Animated Cursor Designer by GDG Software",
+            "Link": {
+                "Url": [
+                    "https://www.gdgsoft.com/anituner"
+                ],
+                "Retrieved": "2025_02_14"
+            }
+        },
+        {
+            "Id": "remove.bg",
+            "Type": "Application",
+            "Description": "remove.bg Web app for Windows Desktop",
+            "Link": {
+                "Url": [
+                    "https://www.remove.bg/"
+                ],
+                "Retrieved": "2025_02_09"
+            }
+        },
+        {
             "Id": "BarrierTrio/Cardsauce",
             "Type": "Library",
             "Description": "A Balatro mod made for Vinesauce!",

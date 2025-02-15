@@ -35,81 +35,81 @@ function Run-ShortcutGoogleChromeProfile {
         $ShowCommand
     )
 
-Begin {
-    function ConvertTo-ShortcutGoogleChromeProfileName {
-        Param(
-            [Int]
-            $ProfileId
-        )
+    Begin {
+        function ConvertTo-ShortcutGoogleChromeProfileName {
+            Param(
+                [Int]
+                $ProfileId
+            )
 
-        $temp = switch ($ProfileId) {
-            0 { "Default" }
-            default { "Profile $ProfileId" }
+            $temp = switch ($ProfileId) {
+                0 { "Default" }
+                default { "Profile $ProfileId" }
+            }
+
+            return $temp
         }
 
-        return $temp
-    }
+        function Get-ShortcutGoogleChromeProfileCommand {
+            Param(
+                [String]
+                $AppLocation,
 
-    function Get-ShortcutGoogleChromeProfileCommand {
-        Param(
-            [String]
-            $AppLocation,
+                [String]
+                $ProfileName
+            )
 
-            [String]
-            $ProfileName
-        )
-
-        return "& `"$AppLocation`" --args --profile-directory=`"$ProfileName`""
-    }
-
-    $setting = Get-Content "$PsScriptRoot/../res/setting.json" `
-        | ConvertFrom-Json
-
-    if ($PsCmdlet.ParameterSetName -eq "ByTags") {
-        $haystack = $setting.Profiles
-        $needles = @()
-
-        foreach ($tag in $ProfileTags) {
-            $needles += @($haystack | where {
-                $tag -in $_.Tags
-            })
+            return "& `"$AppLocation`" --args --profile-directory=`"$ProfileName`""
         }
 
-        $ProfileId = if ($null -eq $needles -or @($needles).Count -eq 0) {
-            $setting.DefaultProfileId
-        } else {
-            $needles[0].Id
+        $setting = Get-Content "$PsScriptRoot/../res/setting.json" `
+            | ConvertFrom-Json
+
+        if ($PsCmdlet.ParameterSetName -eq "ByTags") {
+            $haystack = $setting.Profiles
+            $needles = @()
+
+            foreach ($tag in $ProfileTags) {
+                $needles += @($haystack | where {
+                    $tag -in $_.Tags
+                })
+            }
+
+            $ProfileId = if ($null -eq $needles -or @($needles).Count -eq 0) {
+                $setting.DefaultProfileId
+            } else {
+                $needles[0].Id
+            }
         }
+
+        $profileName = ConvertTo-ShortcutGoogleChromeProfileName `
+            -ProfileId $ProfileId
+
+        $command = Get-ShortcutGoogleChromeProfileCommand `
+            -AppLocation $setting.AppLocation `
+            -ProfileName $profileName
+
+        if ($DebugMode) {
+            $command = "$command --remote-debugging-port=$($setting.RemoteDebuggingPort)"
+        }
+
+        $urls = ""
     }
 
-    $profileName = ConvertTo-ShortcutGoogleChromeProfileName `
-        -ProfileId $ProfileId
-
-    $command = Get-ShortcutGoogleChromeProfileCommand `
-        -AppLocation $setting.AppLocation `
-        -ProfileName $profileName
-
-    if ($DebugMode) {
-        $command = "$command --remote-debugging-port=$($setting.RemoteDebuggingPort)"
+    Process {
+        $urls += ' ' + (($Url | foreach { "`"${psitem}`"" }) -join ' ')
     }
 
-    $urls = ""
-}
+    End {
+        $command = "$command$urls"
 
-Process {
-    $urls += ' ' + (($Url | foreach { "`"${psitem}`"" }) -join ' ')
-}
-
-End {
-    $command = "$command$urls"
-
-    return $(if ($ShowCommand) {
-        $command
+        return $(if ($ShowCommand) {
+            $command
+        }
+        else {
+            iex $command
+        })
     }
-    else {
-        iex $command
-    })
-}
 }
 
 function Stop-ShortcutGoogleChrome {
@@ -117,7 +117,7 @@ function Stop-ShortcutGoogleChrome {
         Get-Content |
         ConvertFrom-Json
 
-    $dateTime = Get-Date -Format "yyyy_MM_dd_HHmmss"
+    $dateTime = Get-Date -Format "yyyy_MM_dd_HHmmss" # Uses DateTimeFormat
     $filePath = "~/session_-_$($dateTime)_google-chrome-interrupt.onetab"
     $response = Invoke-RestMethod `
         -Uri "http://127.0.0.1:$($setting.RemoteDebuggingPort)/json" `

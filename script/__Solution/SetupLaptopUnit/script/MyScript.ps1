@@ -120,7 +120,7 @@ function Save-LastAction {
 
     $session.LastAction = [PsCustomObject]@{
         Name = $Name
-        Time = Get-Date -Format 'yyyy_MM_dd_HHmmss'
+        Time = Get-Date -Format 'yyyy_MM_dd_HHmmss' # Uses DateTimeFormat
         Success = $Success
     }
 
