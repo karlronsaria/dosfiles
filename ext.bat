@@ -3,6 +3,7 @@
 echo *.ahk
 echo *.ahk2
 echo *.bat
+echo *.cmd
 echo *.htm
 echo *.html
 echo *.json
