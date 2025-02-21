@@ -117,7 +117,7 @@ function Stop-ShortcutGoogleChrome {
         Get-Content |
         ConvertFrom-Json
 
-    $dateTime = Get-Date -Format "yyyy_MM_dd_HHmmss" # Uses DateTimeFormat
+    $dateTime = Get-Date -Format "yyyy-MM-dd-HHmmss" # Uses DateTimeFormat
     $filePath = "~/session_-_$($dateTime)_google-chrome-interrupt.onetab"
     $response = Invoke-RestMethod `
         -Uri "http://127.0.0.1:$($setting.RemoteDebuggingPort)/json" `

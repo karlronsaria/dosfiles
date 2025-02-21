@@ -1,7 +1,7 @@
 :: Source:
 ::   https://serverfault.com/questions/294787/how-do-i-force-sync-the-time-on-windows-workstation-or-server
 :: Retrieved:
-::   2020_03_02
+::   2020-03-02
 :: Requires:
 ::   RunAsAdministrator
 

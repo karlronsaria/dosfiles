@@ -10,12 +10,12 @@ A collection of shortcut DOS files
       - title: 4K Space Stock Footage Motion Graphics Background
       - uploader: TDM Footage
     - url: <https://www.youtube.com/watch?v=QaytbdHJF7U>
-    - retrieved: 2023_11_09
+    - retrieved: 2023-11-09
 
 ## modules
 
 - [ShortcutGoogleChrome](./pwsh/ShortcutGoogleChrome/readme.md)
-- [ShortcutFfmpeg](./pwsh/ShortcutFfmpeg/readme.md)
+- ~~[ShortcutFfmpeg](./pwsh/__RTFM/ShortcutFfmpeg/readme.md)~~ **RTFM**
 
 ## task
 

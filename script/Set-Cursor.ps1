@@ -7,7 +7,7 @@ function Set-Cursor {
           - <https://superuser.com/questions/1769195/how-to-change-mouse-cursor-using-powershell-script-on-windows-11-without-restart>
           - <https://superuser.com/users/8672/harrymc>
           - <https://devblogs.microsoft.com/scripting/use-powershell-to-change-the-mouse-pointer-scheme/>
-        - retrieved: 2024_09_24
+        - retrieved: 2024-09-24
         #>
         $cSharpSig =
 @'

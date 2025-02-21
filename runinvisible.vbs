@@ -9,4 +9,4 @@ CreateObject("Wscript.Shell").Run """" & _
 '
 '# link
 '- url: https://superuser.com/questions/62525/run-a-batch-file-in-a-completely-hidden-way
-'- retrieved: 2023_10_17
+'- retrieved: 2023-10-17

@@ -10,15 +10,15 @@ Permanantly and forcefully removes Microsoft Edge, and attempts to make auto-rei
 .LINK
 - What: motive
     - Url: <https://www.youtube.com/watch?v=w8EGomuEX8s&t=140s>
-    - Retrieved: 2024_02_02
+    - Retrieved: 2024-02-02
 .LINK
 - What: howto uninstall, prevent reinstall
     - Url: <https://www.tomsguide.com/how-to/how-to-uninstall-microsoft-edge>
-    - Retrieved: 2024_02_02
+    - Retrieved: 2024-02-02
 .LINK
 - What: howto remove AppX package
     - Url: <https://www.process.st/how-to/uninstall-microsoft-edge/>
-    - Retrieved: 2024_02_02
+    - Retrieved: 2024-02-02
 #>
 
 # *********************

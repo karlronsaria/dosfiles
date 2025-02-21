@@ -8,10 +8,10 @@ set "sysWalls=dir '%windir%/Web/*.jpg' -Recurse"
 set "myWalls=dir '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready'"
 set "myArrow='C:/shortcut/dos/res/toddhoward/emote/todd-emote-color-wide.ico'"
 
-:: :: (karlr 2024_12_24)
+:: :: (karlr 2024-12-24)
 set "cmd=%cmd% -NoProfile "
 set "cmd=%cmd% -Command ""
-:: :: (karlr 2024_12_24)
+:: :: (karlr 2024-12-24)
 :: set "cmd=%cmd%Import-DemandModule PsFrivolous, theme -Mode And"
 set "cmd=%cmd%. %OneDrive%\Documents\WindowsPowerShell\Scripts\PsFrivolous\demand\Theme.ps1"
 set "cmd=%cmd%; $null = Set-MousePointerTheme"

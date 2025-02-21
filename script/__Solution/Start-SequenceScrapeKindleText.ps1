@@ -1,10 +1,10 @@
 <#
 .LINK
 Url: <https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-keybd_event>
-Retrieved: 2025_01_08
+Retrieved: 2025-01-08
 .LINK
 Url: <https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-sendinput>
-Retrieved: 2025_01_08
+Retrieved: 2025-01-08
 #>
 Param(
     [ArgumentCompleter({

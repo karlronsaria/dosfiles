@@ -79,7 +79,7 @@ function Invoke-Win32 {
     ## Begin to build the dynamic assembly
     $name = New-Object Reflection.AssemblyName 'PInvokeAssembly'
 
-    ## karlr (2021_06_10)
+    ## karlr (2021-06-10)
     $assembly = if ($PsVersionTable.PsVersion.Major -ge 7) {
         [System.Reflection.Emit.AssemblyBuilder]::DefineDynamicAssembly(
             $name,

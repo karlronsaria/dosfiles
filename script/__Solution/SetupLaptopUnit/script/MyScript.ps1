@@ -82,7 +82,7 @@ function Connect-MyWebProfile {
 
 function Install-Chocolatey {
     # link
-    # - retrieved: 2023_06_06
+    # - retrieved: 2023-06-06
     $url = 'https://community.chocolatey.org/install.ps1'
 
     Set-ExecutionPolicy 'Bypass' -Scope 'Process' -Force
@@ -120,7 +120,7 @@ function Save-LastAction {
 
     $session.LastAction = [PsCustomObject]@{
         Name = $Name
-        Time = Get-Date -Format 'yyyy_MM_dd_HHmmss' # Uses DateTimeFormat
+        Time = Get-Date -Format 'yyyy-MM-dd-HHmmss' # Uses DateTimeFormat
         Success = $Success
     }
 

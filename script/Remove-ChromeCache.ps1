@@ -32,7 +32,7 @@
 		This only removes local site data. To request removal from any online servers, go to chrome://settings/siteData (as of 22 March 2020).
 		
     .NOTES
-        Sources retrieved at: 2020_03_22
+        Sources retrieved at: 2020-03-22
         
     .LINK
         https://stackoverflow.com/questions/25210330/script-for-clearing-chrome-or-firefox-cache-on-windows

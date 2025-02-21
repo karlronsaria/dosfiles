@@ -20,7 +20,7 @@ OptimizePowerShellStartup.ps1
 
 .LINK
 Url: <https://github.com/BornToBeRoot/PowerShell/blob/master/Documentation/Script/OptimizePowerShellStartup.README.md>
-Retrieved: 2025_02_05
+Retrieved: 2025-02-05
 #>
 
 Process{

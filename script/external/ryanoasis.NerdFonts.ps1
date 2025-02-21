@@ -2,12 +2,12 @@
 .LINK
 Description: ChrisTitusTech powershell-profile
 Url: <https://github.com/ChrisTitusTech/powershell-profile>
-Retrieved: 2025_01_24
+Retrieved: 2025-01-24
 
 .LINK
 Description: NerdFonts repository
 Url: <https://github.com/ryanoasis/nerd-fonts>
-Retrieved: 2025_01_25
+Retrieved: 2025-01-25
 #>
 
 function Install-NerdFonts {

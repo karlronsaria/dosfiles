@@ -37,17 +37,17 @@ goto :setcmd
 
 :setcmd
 set "cmd=sudo pwsh"
-:: :: (karlr 2024_12_24)
+:: :: (karlr 2024-12-24)
 set "cmd=%cmd% -NoProfile"
 set "cmd=%cmd% -Command ""
-:: :: (karlr 2024_12_24)
+:: :: (karlr 2024-12-24)
 :: set "cmd=%cmd%Import-DemandModule PsFrivolous, theme -Mode And"
 set "cmd=%cmd%. %OneDrive%\Documents\WindowsPowerShell\Scripts\PsFrivolous\demand\Theme.ps1"
 set "cmd=%cmd%; $null = Set-MousePointerTheme -Name %pointer%"
 set "cmd=%cmd%; $null = Rename-DesktopItem -Special RecycleBin -NewName '%recyclebin%'"
 set "cmd=%cmd%; $null = Set-ShortcutIconOverlay%arrows% -RestartExplorer -Force"
 set "cmd=%cmd%; $null = %walls% _bar_ Get-Random _bar_ foreach { $_.FullName } _bar_ Set-Wallpaper"
-set "cmd=%cmd%; $null = Copy-Item '%wtsettingsloc%/settings.json' -Dest "%wtbackuploc%/__OLD/wtsettings_-_$(Get-Date -f yyyy_MM_dd_HHmmss).json" -Force" :: Uses DateTimeFormat
+set "cmd=%cmd%; $null = Copy-Item '%wtsettingsloc%/settings.json' -Dest "%wtbackuploc%/__OLD/wtsettings_-_$(Get-Date -f yyyy-MM-dd-HHmmss).json" -Force" :: Uses DateTimeFormat
 set "cmd=%cmd%; $null = Copy-Item "%wtbackuploc%/%wtsettings%" -Dest '%wtsettingsloc%/settings.json' -Force"
 set "cmd=%cmd%""
 
