@@ -1,5 +1,6 @@
 @echo off
 
+set "timeout=7"
 set "threshold=1000"
 set "caption=Added to log"
 
@@ -26,7 +27,7 @@ set "command=%command%; Out-File -Path $lastFile -InputObject $myLog -Append"
 
 :toast
 set "command=%command%; . '%~dp0.\pwsh\Toast.ps1'"
-set "command=%command%; Get-Content $lastFile _bar_ Select-Object -Last 1 _bar_ Out-Toast -Title '%caption%'"
+set "command=%command%; Get-Content $lastFile _bar_ Select-Object -Last 1 _bar_ Out-Toast -Title '%caption%' -SuggestedTimeout %timeout%"
 set "command=%command%"""
 
 if "%~1" EQU "--whatif" goto :whatif
