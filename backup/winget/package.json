@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-01-11T03:14:34.977-00:00",
+	"CreationDate" : "2025-02-27T05:30:57.275-00:00",
 	"Sources" : 
 	[
 		{
@@ -34,6 +34,9 @@
 					"PackageIdentifier" : "KDE.Krita"
 				},
 				{
+					"PackageIdentifier" : "MiKTeX.MiKTeX"
+				},
+				{
 					"PackageIdentifier" : "Mozilla.Firefox"
 				},
 				{
@@ -61,6 +64,9 @@
 					"PackageIdentifier" : "JeffreyPfau.mGBA"
 				},
 				{
+					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.msodbcsql.17"
 				},
 				{
@@ -85,9 +91,6 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
 				},
 				{
-					"PackageIdentifier" : "OpenJS.NodeJS"
-				},
-				{
 					"PackageIdentifier" : "StrawberryPerl.StrawberryPerl"
 				},
 				{
@@ -98,6 +101,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WebDeploy"
+				},
+				{
+					"PackageIdentifier" : "JohnMacFarlane.Pandoc"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.OpenJDK.17"
@@ -112,9 +118,6 @@
 					"PackageIdentifier" : "RevoUninstaller.RevoUninstaller"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerShell"
-				},
-				{
 					"PackageIdentifier" : "Amazon.Corretto.21.JDK"
 				},
 				{
@@ -124,13 +127,22 @@
 					"PackageIdentifier" : "Starship.Starship"
 				},
 				{
+					"PackageIdentifier" : "OpenJS.NodeJS"
+				},
+				{
 					"PackageIdentifier" : "Alacritty.Alacritty"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell"
 				},
 				{
 					"PackageIdentifier" : "SlackTechnologies.Slack"
 				},
 				{
 					"PackageIdentifier" : "valinet.ExplorerPatcher"
+				},
+				{
+					"PackageIdentifier" : "Musescore.Musescore"
 				},
 				{
 					"PackageIdentifier" : "GoLang.Go"
@@ -160,10 +172,16 @@
 					"PackageIdentifier" : "OBSProject.OBSStudio"
 				},
 				{
-					"PackageIdentifier" : "RubyInstallerTeam.Ruby.3.2"
+					"PackageIdentifier" : "RubyInstallerTeam.RubyWithDevKit.3.3"
+				},
+				{
+					"PackageIdentifier" : "RubyInstallerTeam.RubyWithDevKit.3.4"
 				},
 				{
 					"PackageIdentifier" : "Valve.Steam"
+				},
+				{
+					"PackageIdentifier" : "Ultimaker.Cura"
 				},
 				{
 					"PackageIdentifier" : "KDE.Kdenlive"
@@ -178,16 +196,19 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.DotNet.SDK.8"
+					"PackageIdentifier" : "Mojang.MinecraftLauncher"
 				},
 				{
-					"PackageIdentifier" : "Mojang.MinecraftLauncher"
+					"PackageIdentifier" : "Microsoft.DotNet.SDK.8"
 				},
 				{
 					"PackageIdentifier" : "Python.Launcher"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2005.x86"
+				},
+				{
+					"PackageIdentifier" : "GOG.Galaxy"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
@@ -223,6 +244,9 @@
 					"PackageIdentifier" : "Brave.Brave"
 				},
 				{
+					"PackageIdentifier" : "DeSmuMETeam.DeSmuME"
+				},
+				{
 					"PackageIdentifier" : "DenoLand.Deno"
 				},
 				{
@@ -235,6 +259,12 @@
 					"PackageIdentifier" : "Julialang.Julia"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.Sysinternals"
+				},
+				{
+					"PackageIdentifier" : "RubyInstallerTeam.Ruby.3.2"
+				},
+				{
 					"PackageIdentifier" : "Rustlang.Rustup"
 				},
 				{
@@ -244,19 +274,25 @@
 					"PackageIdentifier" : "Ventoy.Ventoy"
 				},
 				{
+					"PackageIdentifier" : "ajeetdsouza.zoxide"
+				},
+				{
 					"PackageIdentifier" : "JannisX11.Blockbench"
 				},
 				{
 					"PackageIdentifier" : "Roblox.Roblox"
 				},
 				{
+					"PackageIdentifier" : "Warp.Warp"
+				},
+				{
 					"PackageIdentifier" : "Python.Python.3.13"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerToys"
+					"PackageIdentifier" : "Python.Python.3.12"
 				},
 				{
-					"PackageIdentifier" : "Python.Python.3.12"
+					"PackageIdentifier" : "Microsoft.PowerToys"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Teams"
@@ -313,5 +349,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.9.25200"
+	"WinGetVersion" : "1.10.320"
 }
