@@ -26,6 +26,7 @@ echo *.rb
 echo *.rs
 echo *.sh
 echo *.sql
+echo *.toml
 echo *.ts
 echo *.txt
 echo *.vbs
