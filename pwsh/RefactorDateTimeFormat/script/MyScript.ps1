@@ -188,7 +188,7 @@ function Replace-DateTimeString {
         [Switch]
         $Recurse,
 
-        [ValidateSet('Date', 'DatePattern', 'DateTimePattern')]
+        [ValidateSet('Date', 'DatePattern', 'DateTimePattern', 'OsDatePattern')]
         [String]
         $Target = 'Date'
     )
@@ -203,6 +203,16 @@ function Replace-DateTimeString {
 
                 'DateTimePattern' {
                     "yyyy", "MM", "dd", "HHmmss"
+                    break
+                }
+
+                'OsDatePattern' {
+                    "%Y", "%m", "%d"
+                    break
+                }
+
+                'OsDateTimePattern' {
+                    "%Y", "%m", "%d", "%H%M%S"
                     break
                 }
 

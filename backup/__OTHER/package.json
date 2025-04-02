@@ -1,6 +1,17 @@
 {
     "Packages": [
         {
+            "Id": "InertSteak/Pokermon",
+            "Type": "Library",
+            "Description": "A full content mod for Balatro, adding content based on Pokemon",
+            "Link": {
+                "Url": [
+                    "https://github.com/InertSteak/Pokermon"
+                ],
+                "Retrieved": "2025-03-17"
+            }
+        },
+        {
             "Id": "Pyrochild/Plugins",
             "Type": "Library",
             "Description": "Plugin/extension pack for Paint.NET, made by pyrochild (2007, maintained as of 2020-11-21), needed in order to make outline-text images",
