@@ -4,21 +4,20 @@
     "actions": 
     [
         {
-            "command": "unbound",
-            "keys": "ctrl+v"
-        },
-        {
             "command": 
             {
                 "action": "copy",
                 "singleLine": false
             },
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+c"
+            "id": "User.copy.644BA8F2"
         },
         {
             "command": "paste",
             "id": "User.paste"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
         },
         {
             "command": 
@@ -27,19 +26,32 @@
                 "split": "auto",
                 "splitMode": "duplicate"
             },
-            "id": "User.splitPane.A6751878",
-            "keys": "alt+shift+d"
-        },
-        {
-            "command": "find",
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
+            "id": "User.splitPane.A6751878"
         }
     ],
     "confirmCloseAllTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "keybindings": 
+    [
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        }
+    ],
     "newTabMenu": 
     [
         {
@@ -88,7 +100,7 @@
             },
             {
                 "backgroundImage": "C:\\shortcut\\dos\\res\\toddhoward\\todd_howard_143_flipped.jpg",
-                "backgroundImageOpacity": 0.25,
+                "backgroundImageOpacity": 0.5,
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
@@ -97,7 +109,7 @@
                 "padding": "20"
             },
             {
-                "backgroundImage": "C:\\shortcut\\dos\\res\\toddhoward\\the-todd-of-spring.gif",
+                "backgroundImage": "C:\\shortcut\\dos\\res\\toddhoward\\todd_howard_033_flipped-removebg.png",
                 "backgroundImageOpacity": 0.65,
                 "colorScheme": "Campbell",
                 "cursorShape": "filledBox",
@@ -181,14 +193,15 @@
                 "source": "VSDebugConsole"
             },
             {
-                "backgroundImage": "",
+                "backgroundImage": null,
                 "backgroundImageOpacity": 1,
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "cursorColor": "#000000",
+                "cursorHeight": 1,
+                "guid": "{58e27acf-d9de-5748-9283-5454004a19a6}",
                 "hidden": false,
                 "name": "Capture Prompt",
-                "opacity": 100,
-                "cursorColor": "#000000",
-                "cursorHeight": 1
+                "opacity": 100
             }
         ]
     },

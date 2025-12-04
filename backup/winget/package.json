@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-02-27T05:30:57.275-00:00",
+	"CreationDate" : "2025-07-15T16:04:41.333-00:00",
 	"Sources" : 
 	[
 		{
@@ -40,7 +40,19 @@
 					"PackageIdentifier" : "Mozilla.Firefox"
 				},
 				{
+					"PackageIdentifier" : "Mozilla.Thunderbird"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.OneDrive"
+				},
+				{
+					"PackageIdentifier" : "PostgreSQL.PostgreSQL.17"
+				},
+				{
+					"PackageIdentifier" : "Piriform.Recuva"
+				},
+				{
+					"PackageIdentifier" : "TablePlus.TablePlus"
 				},
 				{
 					"PackageIdentifier" : "Unity.Unity.2022"
@@ -52,9 +64,6 @@
 					"PackageIdentifier" : "Unity.UnityHub"
 				},
 				{
-					"PackageIdentifier" : "VideoLAN.VLC"
-				},
-				{
 					"PackageIdentifier" : "vim.vim"
 				},
 				{
@@ -64,10 +73,34 @@
 					"PackageIdentifier" : "JeffreyPfau.mGBA"
 				},
 				{
+					"PackageIdentifier" : "PostgreSQL.pgAdmin"
+				},
+				{
+					"PackageIdentifier" : "Inkscape.Inkscape"
+				},
+				{
 					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
 				},
 				{
+					"PackageIdentifier" : "Oracle.VirtualBox"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.msodbcsql.17"
+				},
+				{
+					"PackageIdentifier" : "EclipseAdoptium.Temurin.11.JDK"
+				},
+				{
+					"PackageIdentifier" : "dotPDN.PaintDotNet"
+				},
+				{
+					"PackageIdentifier" : "EclipseAdoptium.Temurin.17.JRE"
+				},
+				{
+					"PackageIdentifier" : "BlenderFoundation.Blender"
+				},
+				{
+					"PackageIdentifier" : "NordSecurity.NordVPN"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
@@ -76,13 +109,16 @@
 					"PackageIdentifier" : "equalsraf.neovim-qt"
 				},
 				{
-					"PackageIdentifier" : "Oracle.MySQLWorkbench"
+					"PackageIdentifier" : "OpenJS.NodeJS"
 				},
 				{
 					"PackageIdentifier" : "Google.Chrome"
 				},
 				{
-					"PackageIdentifier" : "Inkscape.Inkscape"
+					"PackageIdentifier" : "EclipseAdoptium.Temurin.21.JRE"
+				},
+				{
+					"PackageIdentifier" : "SlackTechnologies.Slack"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.CLRTypesSQLServer.2019"
@@ -91,25 +127,25 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
 				},
 				{
+					"PackageIdentifier" : "JohnMacFarlane.Pandoc"
+				},
+				{
 					"PackageIdentifier" : "StrawberryPerl.StrawberryPerl"
 				},
 				{
 					"PackageIdentifier" : "Oracle.JavaRuntimeEnvironment"
 				},
 				{
-					"PackageIdentifier" : "calibre.calibre"
+					"PackageIdentifier" : "EclipseAdoptium.Temurin.11.JRE"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.WebDeploy"
-				},
-				{
-					"PackageIdentifier" : "JohnMacFarlane.Pandoc"
+					"PackageIdentifier" : "Alacritty.Alacritty"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.OpenJDK.17"
 				},
 				{
-					"PackageIdentifier" : "BlenderFoundation.Blender"
+					"PackageIdentifier" : "EclipseAdoptium.Temurin.21.JDK"
 				},
 				{
 					"PackageIdentifier" : "DEVCOM.Lua"
@@ -118,43 +154,34 @@
 					"PackageIdentifier" : "RevoUninstaller.RevoUninstaller"
 				},
 				{
-					"PackageIdentifier" : "Amazon.Corretto.21.JDK"
-				},
-				{
-					"PackageIdentifier" : "Oracle.VirtualBox"
-				},
-				{
-					"PackageIdentifier" : "Starship.Starship"
-				},
-				{
-					"PackageIdentifier" : "OpenJS.NodeJS"
-				},
-				{
-					"PackageIdentifier" : "Alacritty.Alacritty"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.PowerShell"
-				},
-				{
-					"PackageIdentifier" : "SlackTechnologies.Slack"
-				},
-				{
-					"PackageIdentifier" : "valinet.ExplorerPatcher"
-				},
-				{
-					"PackageIdentifier" : "Musescore.Musescore"
+					"PackageIdentifier" : "calibre.calibre"
 				},
 				{
 					"PackageIdentifier" : "GoLang.Go"
 				},
 				{
-					"PackageIdentifier" : "dotPDN.PaintDotNet"
-				},
-				{
 					"PackageIdentifier" : "TheDocumentFoundation.LibreOffice"
 				},
 				{
+					"PackageIdentifier" : "Amazon.Corretto.21.JDK"
+				},
+				{
+					"PackageIdentifier" : "Oracle.MySQLWorkbench"
+				},
+				{
+					"PackageIdentifier" : "Musescore.Musescore"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WebDeploy"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
+				},
+				{
+					"PackageIdentifier" : "Starship.Starship"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community"
@@ -163,16 +190,22 @@
 					"PackageIdentifier" : "Amazon.Kindle"
 				},
 				{
+					"PackageIdentifier" : "Rakuten.Kobo"
+				},
+				{
 					"PackageIdentifier" : "LLVM.LLVM"
+				},
+				{
+					"PackageIdentifier" : "LibreWolf.LibreWolf"
+				},
+				{
+					"PackageIdentifier" : "MCreator.MCreator"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Edge"
 				},
 				{
 					"PackageIdentifier" : "OBSProject.OBSStudio"
-				},
-				{
-					"PackageIdentifier" : "RubyInstallerTeam.RubyWithDevKit.3.3"
 				},
 				{
 					"PackageIdentifier" : "RubyInstallerTeam.RubyWithDevKit.3.4"
@@ -190,25 +223,28 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.9"
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.8"
 				},
 				{
 					"PackageIdentifier" : "Mojang.MinecraftLauncher"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.DotNet.SDK.8"
-				},
-				{
-					"PackageIdentifier" : "Python.Launcher"
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.9"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2005.x86"
 				},
 				{
 					"PackageIdentifier" : "GOG.Galaxy"
+				},
+				{
+					"PackageIdentifier" : "Python.Launcher"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.SDK.8"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
@@ -223,13 +259,13 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
 				},
 				{
+					"PackageIdentifier" : "Jaquadro.NBTExplorer"
+				},
+				{
 					"PackageIdentifier" : "WestWind.MarkdownMonster"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.8"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
@@ -253,16 +289,13 @@
 					"PackageIdentifier" : "Discord.Discord"
 				},
 				{
+					"PackageIdentifier" : "EclipseFoundation.EclipseIDEforJavaDevelopers"
+				},
+				{
 					"PackageIdentifier" : "GnuWin32.Which"
 				},
 				{
 					"PackageIdentifier" : "Julialang.Julia"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.Sysinternals"
-				},
-				{
-					"PackageIdentifier" : "RubyInstallerTeam.Ruby.3.2"
 				},
 				{
 					"PackageIdentifier" : "Rustlang.Rustup"
@@ -278,6 +311,9 @@
 				},
 				{
 					"PackageIdentifier" : "JannisX11.Blockbench"
+				},
+				{
+					"PackageIdentifier" : "RemoveBG.RemoveBG"
 				},
 				{
 					"PackageIdentifier" : "Roblox.Roblox"
@@ -310,13 +346,7 @@
 					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.DevHome"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.WindowsTerminal"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.WSL"
 				},
 				{
 					"PackageIdentifier" : "TheBrowserCompany.Arc"
@@ -349,5 +379,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.10.320"
+	"WinGetVersion" : "1.11.400"
 }

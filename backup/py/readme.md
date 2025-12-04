@@ -1,12 +1,20 @@
-# backup: python packages
+# backup: python
 
-## export
+## IDLE Configuration
+
+```bash
+~/.idlerc
+```
+
+## packages
+
+### export
 
 ```bash
 pip freeze --all > requirements.txt
 ```
 
-## import
+### import
 
 ```bash
 pip install -r requirements.txt

@@ -1,0 +1,128 @@
+{
+    "markdown-preview-enhanced.revealjsTheme": "night.css",
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "markdown.extension.toc.slugifyMode": "vscode",
+    "markdown.extension.toc.updateOnSave": true,
+    "markdown.extension.completion.enabled": false,
+    "markdown.extension.list.indentationSize": "adaptive",
+    "markdown.extension.list.continuation": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "kite.showWelcomeNotificationOnStartup": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "maven.executable.path": "C:\\ProgramData\\chocolatey\\lib\\maven\\apache-maven-3.8.1\\bin\\mvn.cmd",
+    "java.project.importOnFirstTimeStartup": "automatic",
+    "testMate.cpp.log.userId": "2d84b0e6b542af89df067031a2ac8f4377d42567",
+    "testMate.cpp.log.logSentry": "enable",
+    "explorer.confirmDelete": false,
+    "editor.lineNumbers": "relative",
+    "[markdown]": {
+        "editor.suggest.enabled": false
+    },
+    "[python]": {
+        "editor.formatOnType": true,
+
+        // link: Visual Studio Code - Vertical rulers #vscode
+        // - url: <https://www.youtube.com/watch?v=HPKBkJPs2DM>
+        // - retrieved: 2025_01_11
+        "editor.rulers": [
+            { "column": 79, "color": "#a400dbF0" },
+            { "column": 72, "color": "#005dcff0" }
+        ]
+    },
+    "git.autofetch": true,
+    "vim.enableNeovim": true,
+    "vim.neovimConfigPath": "~/AppData/Local/nvim/init.lua",
+    "vim.neovimPath": "C:/tools/neovim/nvim-win64/bin/nvim.exe",
+    "vim.neovimUseConfigFile": true,
+    "background.style": {
+        "content": "''",
+        "pointer-events": "none",
+        "position": "absolute",
+        "z-index": "99999",
+        "width": "100%",
+        "height": "100%",
+        "background-position": "100% 100%",
+        "background-repeat": "no-repeat",
+        "opacity": 0.4
+    },
+    "background.autoInstall": false,
+    "background.editorBackgrounds": [
+        "C:/shortcut/dos/res/barry-included.gif",
+        "C:/shortcut/dos/res/barry-tableflip-extent.png",
+        "C:/shortcut/dos/res/derek-muller.png",
+        "C:/shortcut/dos/res/do-the-corey-mirrored-alpha-small.gif",
+        "C:/shortcut/dos/res/jacksfilms-chair-therapy-extended.png",
+        "C:/shortcut/dos/res/jacksfilms-point-wide-cornerfade.png",
+        "C:/shortcut/dos/res/jakey-00-extended.png",
+        "C:/shortcut/dos/res/sean-murray-001.png",
+        "C:/shortcut/dos/res/sean-murray-004.png",
+        "C:/shortcut/dos/res/wendigoon-taking-notes.png",
+        "C:/shortcut/dos/res/toddhoward/todd_howard_lean-removebg.png",
+        "C:/shortcut/dos/res/toddhoward/todd_howard_033_flipped-removebg.png",
+        "C:/shortcut/dos/res/vinesauce/vinny-extended-centered-alphagradient.png",
+        "C:/shortcut/dos/res/vinesauce/vinny-speen.gif",
+        "C:/shortcut/dos/res/volodymyr-zelenskyy-sitting-across-001-extend.png"
+    ],
+    "background.windowBackgrounds": [
+        "C:/shortcut/dos/res/large/4k-stock-space-motion.gif",
+        "C:/shortcut/dos/res/large/disney-channel-original.gif",
+        "C:/shortcut/dos/res/large/downward-spiral.gif",
+        "C:/shortcut/dos/res/large/fly-me.gif",
+        "C:/shortcut/dos/res/large/hey-pops.gif",
+        "C:/shortcut/dos/res/large/hey-you-youre-finally-awake.gif",
+        "C:/shortcut/dos/res/large/joel-vinesauce-agga.gif",
+        "C:/shortcut/dos/res/large/maurice-is-an-annoying-time-wizard.gif",
+        "C:/shortcut/dos/res/large/no-one-is-around-to-help.gif",
+        "C:/shortcut/dos/res/large/paulie-bloodbath.gif",
+        "C:/shortcut/dos/res/large/rotate-the-background-20fps.gif",
+        "C:/shortcut/dos/res/large/steamed-hams-x10.gif",
+        "C:/shortcut/dos/res/large/vinny-dedication.gif",
+        "C:/shortcut/dos/res/toddhoward/various-todds.jpg",
+        "C:/shortcut/dos/res/vinesauce/red-vox-another-light-Cover-Art-2.jpg",
+        "C:/shortcut/dos/res/collatz-tree-veritasium.png",
+        "C:/shortcut/dos/res/eoe-000.png",
+        "C:/shortcut/dos/res/eoe-001.jpg",
+        "C:/shortcut/dos/res/Animated_fire_by_nevit.gif",
+        "C:/shortcut/dos/res/horse-plinko-00.gif",
+    ],
+    "background.backgroundOpacity": [
+        0.94,
+        0.65,
+        0.9,
+        0.9,
+    ],
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "\"Fira Code\", monospace",
+    "terminal.integrated.fontFamily": "\"Fira Code\", monospace",
+    "git.openRepositoryInParentFolders": "always",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "cmake.configureOnOpen": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.startupPrompt": "never",
+    "security.workspace.trust.enabled": false,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "background.useInvertedOpacity": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "redhat.telemetry.enabled": true,
+    "glassit.alpha": 250,
+    "dart.flutterSdkPath": "C:\\tools\\flutter",
+    "cmake.options.statusBarVisibility": "icon",
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ]
+}

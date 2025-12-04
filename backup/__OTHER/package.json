@@ -1,6 +1,220 @@
 {
     "Packages": [
         {
+            "Id": "VoidStar\filepilot",
+            "Type": "Application",
+            "Description": "Next-gen file explorer.",
+            "Link": {
+                "Url": [
+                    "https://filepilot.tech/"
+                ]
+            },
+            "Retrieved": "2025-11-28"
+        },
+        {
+            "Id": "gfgddhkdgajcknpmkpcojiknmgmodihj.crx",
+            "Type": "Google Chrome Browser Extension",
+            "Description": "Amazon Basics Product Blocker",
+            "Link": {
+                "Url": [
+                    "https://chromewebstore.google.com/detail/amazon-basics-product-blo/gfgddhkdgajcknpmkpcojiknmgmodihj>",
+                    "https://extpose.com/ext/gfgddhkdgajcknpmkpcojiknmgmodihj>"
+                ]
+            },
+            "Note": "Consider archiving",
+            "Retrieved": "2025-11-27"
+        },
+        {
+            "Id": "xAndrews10/GameTweaks",
+            "Type": "Library",
+            "Description": "A comprehensive quality-of-life mod for Palworld, enhancing gameplay speed, efficiency, and convenience.",
+            "Link": {
+                "Url": [
+                    "https://www.nexusmods.com/palworld/mods/2906"
+                ]
+            },
+            "Retrieved": "2025-11-20"
+        },
+        {
+            "Id": "okaetsu/PalSchema",
+            "Type": "Library",
+            "Description": "A modding framework that utilizes json files to modify Palworld's assets while keeping conflicts minimal.",
+            "Link": {
+                "Url": [
+                    "https://www.nexusmods.com/palworld/mods/2361",
+                    "https://github.com/Okaetsu/PalSchema"
+                ]
+            },
+            "Retrieved": "2025-11-20"
+        },
+        {
+            "Id": "Okaetsu/RE-UE4SS/releases/tag/experimental-palworld",
+            "Type": "Library",
+            "Description": "Palworld-specific release of the experimental branch bc66bb1 due to introduction of engine edits in 0.4.1.5. See issue page for details.",
+            "Link": {
+                "Url": [
+                    "https://github.com/Okaetsu/RE-UE4SS/releases/tag/experimental-palworld"
+                ],
+                "Retrieved": "2025-11-20"
+            }
+        },
+        {
+            "Id": "UE4SS-RE/RE-UE4SS",
+            "Type": "Library",
+            "Description": "Lua scripting system platform, C++ Modding API, SDK generator, blueprint mod loader, live property editor and other dumping utilities for UE4/5 games.",
+            "Link": {
+                "Url": [
+                    "https://github.com/UE4SS-RE/RE-UE4SS"
+                ],
+                "Retrieved": "2025-11-20"
+            }
+        },
+        {
+            "Id": "Battle.net",
+            "Type": "Application",
+            "Description": "Internet-based online game, social networking service, digital distribution, and digital rights management platform developed by Blizzard Entertainment. (\"Battle.net\". wikipedia.org. Retrieved: 2025-11-13.)",
+            "Link": {
+                "Url": [
+                    "https://download.battle.net/"
+                ],
+                "Retrieved": "2025-11-13"
+            }
+        },
+        {
+            "Id": "Lucida-Casual-Regular",
+            "Type": "Typeface",
+            "Description": "Designed by Bigelow & Holmes in 1998, Lucida Big Casual is a bolder and more condensed display addition to Lucida Casual Italic (1993). Bundled with Mac OS 7 through 10.5 as Apple Textile and now available as Lucida Marker (2014). (\"Lucida Big Casual / Textile\". fontsinuse.com. Retrieved: 2025-11-04.)",
+            "Link": {
+                "Url": [
+                    "https://fontsgeek.com/fonts/Lucida-Casual-Regular"
+                ],
+                "Retrieved": "2025-11-04"
+            }
+        },
+        {
+            "Id": "levien/Inconsolata",
+            "Type": "Typeface",
+            "Description": "A humanist lineal monospaced font designed for source code listing, terminal emulators, and similar uses. It was influenced by the proprietary Consolas monospaced font, designed by Lucas de Groot, the proportional Avenir and IBM's classic monospaced Letter Gothic. (\"Inconsolata\". Wikipedia.org. Retrieved 2025-09-11.) A monospace font, designed for code listings and the like, in print. (\"Inconsolata\". Levien.com. Retrieved: 2025-09-11.)",
+            "Link": {
+                "Url": [
+                    "https://levien.com/type/myfonts/inconsolata.html",
+                    "https://www.cosmix.org/software/",
+                    "https://fonts.google.com/specimen/Inconsolata"
+                ],
+                "Retrieved": "2025-09-11"
+            }
+        },
+        {
+            "Id": "crozynski/comicneue",
+            "Type": "Typeface",
+            "Description": "A casual script typeface released in 2014. It was designed by Craig Rozynski with Hrant Papazian as a more modern, refined version of the ubiquitous, but often criticized typeface Comic Sans. (\"Comic Neue\". Wikipedia.org. Retrieved 2025-09-11.) A font that fixes the shortcomings of Comic Sans. (\"crozynski/comicneue\". Github.com. Retrieved 2025-09-11.)",
+            "Links": [
+                {
+                    "Url": ["https://comicneue.com/"],
+                    "Retrieved": "2021-01-01"
+                },
+                {
+                    "Url": [
+                        "https://github.com/crozynski/comicneue",
+                        "https://fonts.google.com/specimen/Comic+Neue"
+                    ],
+                    "Retrieved": "2025-09-11"
+                }
+            ]
+        },
+        {
+            "Id": "weiweihuanghuang/Times-New-Bastard",
+            "Type": "Typeface",
+            "Description": "It's Times New Roman but every seventh letter is jarringly sans serif. Original idea by ommanyte on Tumblr.",
+            "Link": {
+                "Url": [
+                    "https://github.com/weiweihuanghuang/Times-New-Bastard"
+                ],
+                "Retrieved": "2025-09-11"
+            }
+        },
+        {
+            "Id": "MaxiGamer/Typesauce",
+            "Type": "Typeface",
+            "Description": "A typeface based on an original logo design by Evan Hogan|@CWCVille97, made for Vinesauce, a Twitch.TV streaming group.",
+            "Link": {
+                "Url": [
+                    "https://www.deviantart.com/maxigamer/art/Font-TYPESAUCE-A-Vinesauce-Typeface-V1-0-0-801255596",
+                    "https://www.dafont.com/typesauce.font"
+                ],
+                "Retrieved": "2025-09-11"
+            }
+        },
+        {
+            "Id": "felixrieseberg/Clippy",
+            "Type": "Application",
+            "Description": "Novelty desktop assistant that imitates the original for Microsoft Word",
+            "Link": {
+                "Url": [
+                    "https://felixrieseberg.github.io/clippy/"
+                ],
+                "Retrieved": "2025-09-05"
+            }
+        },
+        {
+            "Id": "CDisplayEx",
+            "Type": "Application",
+            "Description": "Light, Efficient CBR Reader. It is the most popular comic book reader. It is able to read all comic book formats (.cbr file, .cbz, .pdf, etc..) and Manga.",
+            "Link": {
+                "Url": [
+                    "https://www.cdisplayex.com/"
+                ],
+                "Retrieved": "2025-08-16"
+            }
+        },
+        {
+            "Id": "erich666/Mineways",
+            "Type": "Application",
+            "Description": "Minecraft peripheral: 3D modeling and NBT injection",
+            "Link": {
+                "Url": [
+                    "https://www.realtimerendering.com/erich/minecraft/public/mineways",
+                    "https://github.com/erich666/Mineways"
+                ],
+                "Retrieved": "2025-07-27"
+            }
+        },
+        {
+            "Id": "MakeCode arcade",
+            "Type": "Application",
+            "Description": "MakeCode Arcade offline app",
+            "Link": {
+                "Url": [
+                    "https://arcade.makecode.com/offline-app",
+                    "https://makecode.com/api/release/arcade/v2.0.56/win64"
+                ],
+                "Retrieved": "2025-07-23"
+            }
+        },
+        {
+            "Id": "MIT App Inventor",
+            "Type": "Application",
+            "Link": {
+                "Url": [
+                  "https://appinventor.mit.edu/",
+                  "https://appinventor.mit.edu/explore/ai2/windows"
+                ],
+                "Retrieved": "2025-04-17"
+            }
+        },
+        {
+            "Id": "ScanSnap Home",
+            "Type": "Application",
+            "Description": "ScanSnap Home",
+            "Link": {
+                "Url": [
+                    "https://www.scansnap.com/d",
+                    "https://www.pfu.ricoh.com/imaging/ssacc/en/start_download_21.html"
+                ],
+                "Retrieved": "2025-04-06"
+            }
+        },
+        {
             "Id": "InertSteak/Pokermon",
             "Type": "Library",
             "Description": "A full content mod for Balatro, adding content based on Pokemon",

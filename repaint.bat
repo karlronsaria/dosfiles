@@ -7,6 +7,7 @@ if "%~1" EQU "--help" goto :help
 if "%~1" EQU "-h" goto :help
 if "%~1" EQU "todd" goto :toddmode
 if "%~1" EQU "vinny" goto :vinnymode
+if "%~1" EQU "barry" goto :barrymode
 if "%~1" EQU "system" goto :systemdefault
 if "%~1" EQU "" goto :systemdefault
 goto :notImplemented
@@ -20,38 +21,64 @@ set "wtsettings=no-image.json"
 goto :setcmd
 
 :toddmode
-set "walls=dir '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready/*.*'"
+set "walls=dir '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready'"
 set "pointer=ToddMode"
 set "arrows= -FilePath (dir 'C:/shortcut/dos/res/toddhoward/emote/*.ico' _bar_ Get-Random)"
 set "recyclebin=Not Skyrim"
-set "wtsettings=toddhoward.json"
+set "wtsettings=toddhowardfestive.json"
 goto :setcmd
 
 :vinnymode
-set "walls=dir '%UserProfile%/Downloads/__OTHER/vinny/pic/wallready/*.*'"
+set "walls=dir '%UserProfile%/Downloads/__OTHER/vinny/pic/wallready'"
 set "pointer=VinnyMode"
 set "arrows= -FilePath (dir 'C:/shortcut/dos/res/vinesauce/ico/*.ico' _bar_ Get-Random)"
 set "recyclebin=Action 52"
-set "wtsettings=toddhoward.json"
+set "wtsettings=vinnyvinesauce.json"
+goto :setcmd
+
+:barrymode
+set "walls=dir '%UserProfile%/Downloads/__OTHER/barry-kramer/pic/wallready'"
+set "pointer=BarryMode"
+set "arrows= -FilePath (dir 'C:/shortcut/dos/res/barry/ico/*.ico' _bar_ Get-Random)"
+set "recyclebin=Recycle Bin"
+set "wtsettings=barrykramer.json"
 goto :setcmd
 
 :setcmd
+set "wallCmd=$null = %walls%"
+set "wallCmd=%wallCmd% _bar_ Get-Random"
+set "wallCmd=%wallCmd% _bar_ foreach { if ($_.PsIsContainer) { dir $_ _bar_ Get-Random } else { $_ } }"
+set "wallCmd=%wallCmd% _bar_ foreach { $_.FullName }"
+set "wallCmd=%wallCmd% _bar_ Set-Wallpaper"
+
 set "cmd=sudo pwsh"
 :: :: (karlr 2024-12-24)
 set "cmd=%cmd% -NoProfile"
 set "cmd=%cmd% -Command ""
 :: :: (karlr 2024-12-24)
 :: set "cmd=%cmd%Import-DemandModule PsFrivolous, theme -Mode And"
-set "cmd=%cmd%. %OneDrive%\Documents\WindowsPowerShell\Scripts\PsFrivolous\demand\Theme.ps1"
+set "cmd=%cmd%. \shortcut\pwsh\Scripts\PsFrivolous\demand\Theme.ps1"
+
+if "%~2" EQU "--wallonly" goto :wallonly
+if "%~3" EQU "--wallonly" goto :wallonly
+goto :mainCmd
+
+:wallonly
+set "cmd=%cmd%; %wallCmd%"
+goto :endSetCmd
+
+:mainCmd
 set "cmd=%cmd%; $null = Set-MousePointerTheme -Name %pointer%"
 set "cmd=%cmd%; $null = Rename-DesktopItem -Special RecycleBin -NewName '%recyclebin%'"
 set "cmd=%cmd%; $null = Set-ShortcutIconOverlay%arrows% -RestartExplorer -Force"
-set "cmd=%cmd%; $null = %walls% _bar_ Get-Random _bar_ foreach { $_.FullName } _bar_ Set-Wallpaper"
+set "cmd=%cmd%; %wallCmd%"
 set "cmd=%cmd%; $null = Copy-Item '%wtsettingsloc%/settings.json' -Dest "%wtbackuploc%/__OLD/wtsettings_-_$(Get-Date -f yyyy-MM-dd-HHmmss).json" -Force" :: Uses DateTimeFormat
 set "cmd=%cmd%; $null = Copy-Item "%wtbackuploc%/%wtsettings%" -Dest '%wtsettingsloc%/settings.json' -Force"
 set "cmd=%cmd%""
+:endSetCmd
 
 if "%~2" EQU "--whatif" goto :echo
+if "%~3" EQU "--whatif" goto :echo
 goto :execute
 
 :echo
@@ -68,14 +95,16 @@ exit /b
 
 :help
 echo.
-echo.Usage: %~n0 [theme [--whatif]]
+echo.Usage: %~n0 [theme [--wallonly] [--whatif]]
 echo.
 echo.Description:
 echo.  Changes the system appearance based on a given theme
 echo.
 echo.Options:
-echo.  --whatif   Echoes the full command
-echo.  --help     Shows this help message
+echo.  --wallonly  Changes the wallpaper ^(desktop background^) only
+echo.  --whatif    Echoes the full command
+echo.  --help      Shows this help message
+echo.    -h
 echo.
 echo.Examples:
 echo.  %~n0

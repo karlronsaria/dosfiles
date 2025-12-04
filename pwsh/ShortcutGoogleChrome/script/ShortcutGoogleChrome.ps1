@@ -15,6 +15,7 @@ function Run-ShortcutGoogleChromeProfile {
 
             return $setting.Profiles.Tags
         })]
+        [Alias('p', 't', 'Tag')]
         [String[]]
         $ProfileTags,
 
@@ -25,6 +26,7 @@ function Run-ShortcutGoogleChromeProfile {
             return $setting.Profiles.Id
         })]
         [Parameter(ParameterSetName = "ById")]
+        [Alias('Id')]
         [Int]
         $ProfileId,
 
