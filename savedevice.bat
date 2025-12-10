@@ -5,7 +5,7 @@ set "command=%command%demand MtpDevice"
 set "command=%command%; Get-MtpDeviceItem -Query"
 set "command=%command% '{ ""Internal storage"": [""Downloads"", ""Pictures"", ""DCIM""] }'"
 set "command=%command% _bar_ foreach { $_.'Internal storage' }"
-set "comamnd=%command% _bar_ foreach { $_.SaveTo('%SystemDrive%/temp/mobile') }"
+set "command=%command% _bar_ foreach { $_.SaveTo('%SystemDrive%/temp/mobile') }"
 set "command=%command%""
 
 if "%~1" EQU "--whatif" goto :echo
