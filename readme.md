@@ -24,6 +24,10 @@ A collection of shortcut DOS files
 - [backup go](./backup/go/readme.md)
 - [backup python](./backup/py/readme.md)
 
+## other
+
+- [backup filepilot](./backup/filepilot/readme.md)
+
 ---
 
 [Todo List](./doc/todo.md)

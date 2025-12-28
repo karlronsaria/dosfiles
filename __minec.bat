@@ -12,7 +12,18 @@ set "world=%defaultWorld%"
 goto :backup
 
 :backup
-pwsh -NoProfile -Command "7z a -r -t7z "%destinationDir%\%world%-$(Get-Date -f yyyy-MM-dd-HHmmss)" %minecraftDir%\%world%\*.*"
+set "command=7z a -r -t7z "%destinationDir%\%world%-$(Get-Date -f yyyy-MM-dd-HHmmss)" %minecraftDir%\%world%\*.*"
+
+if "%~1" EQU "--tops" goto :tops
+if "%~2" EQU "--tops" goto :tops
+goto :exec
+
+:tops
+echo %command%
+exit /b
+
+:exec
+pwsh -NoProfile -Command "%command%"
 
 :: "C:\Program Files (x86)\Minecraft Launcher\MinecraftLauncher.exe"
 

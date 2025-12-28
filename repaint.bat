@@ -1,5 +1,7 @@
 @echo off
 
+if "%~2" EQU "--vscode" goto :vscode
+
 set "wtsettingsloc=%LocalAppData%/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
 set "wtbackuploc=%~dp0./backup/winterminal"
 
@@ -26,6 +28,7 @@ set "pointer=ToddMode"
 set "arrows= -FilePath (dir 'C:/shortcut/dos/res/toddhoward/emote/*.ico' _bar_ Get-Random)"
 set "recyclebin=Not Skyrim"
 set "wtsettings=toddhowardfestive.json"
+set "toddmodeactive=1"
 goto :setcmd
 
 :vinnymode
@@ -87,6 +90,7 @@ exit /b
 
 :execute
 %cmd:_bar_=|%
+if "%toddmodeactive%" EQU "1" goto :playSound
 exit /b
 
 :notImplemented
@@ -95,13 +99,14 @@ exit /b
 
 :help
 echo.
-echo.Usage: %~n0 [theme [--wallonly] [--whatif]]
+echo.Usage: %~n0 [theme [--wallonly|--vscode] [--whatif]]
 echo.
 echo.Description:
 echo.  Changes the system appearance based on a given theme
 echo.
 echo.Options:
 echo.  --wallonly  Changes the wallpaper ^(desktop background^) only
+echo.  --vscode    Switches to VS Code Mode: Swaps out the User Settings file ^(settings.json^)
 echo.  --whatif    Echoes the full command
 echo.  --help      Shows this help message
 echo.    -h
@@ -114,3 +119,50 @@ echo.  %~n0 todd --whatif
 echo.  %~n0 vinny --whatif
 exit /b
 
+:vscode
+set "settingsloc=%AppData%/Code/User"
+set "backuploc=%~dp0./backup/vscode"
+
+if "%~1" EQU "--help" goto :help
+if "%~1" EQU "-h" goto :help
+if "%~1" EQU "todd" goto :vstoddmode
+if "%~1" EQU "system" goto :vssystemdefault
+if "%~1" EQU "" goto :vssystemdefault
+goto :notImplemented
+
+:vssystemdefault
+set "settings=settings-nobg.json"
+goto :vssetcmd
+
+:vstoddmode
+set "settings=settings-main.json"
+goto :vssetcmd
+
+:vssetcmd
+set "cmd=sudo pwsh"
+:: :: (karlr 2024-12-24)
+set "cmd=%cmd% -NoProfile"
+set "cmd=%cmd% -Command ""
+set "cmd=%cmd%; $null = Copy-Item '%settingsloc%/settings.json' -Dest "%backuploc%/__OLD/settings_-_$(Get-Date -f yyyy-MM-dd-HHmmss).json" -Force" :: Uses DateTimeFormat
+set "cmd=%cmd%; $null = Copy-Item "%backuploc%/%settings%" -Dest '%settingsloc%/settings.json' -Force"
+set "cmd=%cmd%""
+:vsendSetCmd
+
+if "%~2" EQU "--whatif" goto :vsecho
+if "%~3" EQU "--whatif" goto :vsecho
+goto :vsexecute
+
+:vsecho
+echo %cmd:_bar_=|%
+exit /b
+
+:vsexecute
+%cmd:_bar_=|%
+exit /b
+
+:playSound
+set "sound=%~dp0./res/toddhoward/sfx/toddhoward_-_welcome-aboard-captain-[k9r0VhwBbt0].wav"
+pwsh -NoProfile -Command ^
+  "(New-Object System.Media.SoundPlayer '%sound%').PlaySync()"
+
+exit /b

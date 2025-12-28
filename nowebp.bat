@@ -29,7 +29,7 @@ set "cmd=%cmd% }"
 :end_command
 set "cmd=%cmd%"""
 
-if "%~1" EQU "--echo" goto :echo
+if "%~1" EQU "--whatif" goto :echo
 goto :run
 
 :echo
