@@ -1,7 +1,7 @@
 :: Requires VLC Media Player
 @echo off
 set "app=%ProgramFiles%\VideoLAN\VLC\vlc.exe"
-set "media=%~dp0..\res\%~1.mp4"
+set "media=%~dp0..\res\large\%~1.mp4"
 set "args=--fullscreen"
 set "args=%args% --play-and-exit"
 set "args=%args% --playlist-autostart"
