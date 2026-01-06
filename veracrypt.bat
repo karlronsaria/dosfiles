@@ -1,0 +1,2 @@
+@"%ProgramFiles%\VeraCrypt\VeraCrypt.exe" %*
+

@@ -1,17 +1,8 @@
 # PowerShell Solution: RefactorDateTimeFormat
 
-## issue
+Around 2025-02, I decided to change all date-time stamps in all of my documents and file trees from using an underscore separator to using a hyphen separator.
 
-- [ ] issue 2025-02-21-012921
-  - actual
-    - nvim commands ``PutDate`` and ``PutDateTime`` use old format
-  - note
-    - You need to look for other system time query tools
-      - lua: ``%Y-%m-%d-%H%M%S``
-
-- [ ] issue 2025-02-21-012807
-  - actual
-    - ``Replace`` output does not include file names
+- eg: ``2025_02_02`` -> ``2025-02-02``
 
 ---
 

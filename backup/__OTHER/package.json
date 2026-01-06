@@ -1,7 +1,19 @@
 {
     "Packages": [
         {
-            "Id": "VoidStar\filepilot",
+            "Id": "4K Vieo Downloader+",
+            "Type": "Application",
+            "Description": "4K Video Downloader Plus is a powerful and feature-rich cross-platform application that enables you to download high-quality videos from various online sources (\"4K Video Downloader Plus\". majorgeeks.com. Retrieved: 2026-01-05.)",
+            "Link": {
+                "Url": [
+                    "https://www.4kdownload.com",
+                    "https://www.majorgeeks.com/files/details/4k_video_downloader_plus.html"
+                ],
+                "Retrieved": "2026-01-05"
+            }
+        },
+        {
+            "Id": "VoidStar/filepilot",
             "Type": "Application",
             "Description": "Next-gen file explorer.",
             "Link": {
@@ -17,8 +29,8 @@
             "Description": "Amazon Basics Product Blocker",
             "Link": {
                 "Url": [
-                    "https://chromewebstore.google.com/detail/amazon-basics-product-blo/gfgddhkdgajcknpmkpcojiknmgmodihj>",
-                    "https://extpose.com/ext/gfgddhkdgajcknpmkpcojiknmgmodihj>"
+                    "https://chromewebstore.google.com/detail/amazon-basics-product-blo/gfgddhkdgajcknpmkpcojiknmgmodihj",
+                    "https://extpose.com/ext/gfgddhkdgajcknpmkpcojiknmgmodihj"
                 ]
             },
             "Note": "Consider archiving",

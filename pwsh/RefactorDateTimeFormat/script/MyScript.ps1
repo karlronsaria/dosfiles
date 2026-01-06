@@ -75,7 +75,7 @@ function Rename-DateTimeString {
 
                 $before = $item.FullName
 
-                $name = $item.Name | Replace-DateTimeString `
+                $name = $item.Name | Update-DateTimeString `
                     -ReferenceSeparator:$ReferenceSeparator `
                     -DifferenceSeparator:$DifferenceSeparator
 
@@ -122,7 +122,7 @@ function Rename-DateTimeString {
     }
 }
 
-function Replace-DateTimeString {
+function Update-DateTimeString {
     Param(
         [Parameter(
             ParameterSetName = 'ByCat',
@@ -238,7 +238,7 @@ function Replace-DateTimeString {
                             -Status (Get-Item $_).Name `
                             -PercentComplete (100 * $count / $allFiles.Count)
 
-                        $result = Replace-DateTimeString `
+                        $result = Update-DateTimeString `
                             -FilePath $_ `
                             -Force:$Force `
                             -Target:$Target
@@ -267,7 +267,7 @@ function Replace-DateTimeString {
                         Get-Content
 
                     $after = $before |
-                        Replace-DateTimeString `
+                        Update-DateTimeString `
                             -Target:$Target
 
                     $diff = Compare-DateTimeString -Ref $before -Dif $after

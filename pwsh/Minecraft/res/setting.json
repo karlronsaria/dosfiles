@@ -1,5 +1,0 @@
-{
-    "SaveDirectoryExp": "\"$($env:AppData)/.minecraft/saves\"",
-    "BackupDirectoryExp": "\"$($env:OneDrive)/Documents/backup/minecraft\""
-}
-
