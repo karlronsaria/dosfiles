@@ -1,6 +1,128 @@
 {
     "Packages": [
         {
+            "Id": "fccview/degoog",
+            "Type": "Docker Container",
+            "Description": "Search aggregator that queries multiple engines and shows results in one place. You can add custom search engines, bang-command plugins, and slot plugins (query-triggered panels above/below results or in the sidebar). The dream would be to eventually have a user made marketplace for plugins/engines.",
+            "Link": {
+                "Url": [
+                   "https://github.com/fccview/degoog"
+                ],
+                "Retrieved": "2026-03-24"
+            },
+            "Content": [
+                "services:",
+                "  degoog:",
+                "    image: ghcr.io/fccview/degoog:latest",
+                "    volumes:",
+                "      - ./data:/app/data",
+                "    user: \"1000:1000\"",
+                "    ports:",
+                "      - \"4444:4444\"",
+                "    restart: unless-stopped"
+            ]
+        },
+        {
+            "Id": "Overwolf/Thunderstore",
+            "Type": "Application",
+            "Description": "A simple and easy to use mod manager for Lethal Company, R.E.P.O., Valheim, Risk of Rain 2, and many other games.",
+            "Link": {
+                "Url": [
+                    "https://thunderstore.io/",
+                    "https://www.overwolf.com/app/thunderstore-thunderstore_mod_manager"
+                ],
+                "Retrieved": "2026-03-03"
+            }
+        },
+        {
+            "Id": "BanjoRecomp/BanjoRecomp",
+            "Type": "Application",
+            "Description": "Banjo: Recompiled is a project that uses N64: Recompiled to statically recompile Banjo-Kazooie into a native port with many new features, enhancements, and extensive mod support. This project uses RT64 as the rendering engine to provide graphical enhancements.",
+            "Link": {
+                "Url": [
+                    "https://github.com/BanjoRecomp/BanjoRecomp"
+                ],
+                "Retrieved": "2026-03-03"
+            }
+        },
+        {
+            "Id": "stenzek/duckstation",
+            "Type": "Application",
+            "Description": "DuckStation is a PS1 Emulator aiming for the best accuracy and game support.",
+            "Link": {
+                "Url": [
+                    "https://github.com/stenzek/duckstation",
+                    "https://duckstation.org/"
+                ],
+                "Retrieved": "2026-03-03"
+            }
+        },
+        {
+            "Id": "LEGO Education Spike",
+            "By": "LEGO Education",
+            "Type": "Application",
+            "Description": "The SPIKE App is a student-facing app that can be used with both SPIKE Essential and SPIKE Prime to follow and complete lessons. The app includes “getting started” material, lessons, building instructions, and a series of coding experiences that progress from icon- and word-block coding based on Scratch to text-based coding based on Python.",
+            "Link": {
+                "Url": [
+                    "https://education.lego.com/",
+                    "https://education.lego.com/en-us/downloads/spike-app/software/"
+                ],
+                "Retrieved": "2026-01-29"
+            }
+        },
+        {
+            "Id": "DaVinci Resolve",
+            "By": "Blackmagic Design",
+            "Type": "Suite",
+            "Description": "DaVinci Resolve is a proprietary application for non-linear video editing, color correction, color grading, visual effects, and audio post-production. (\"DaVinci Resolve\". wikipedia.org. Retrieved: 2026-01-22.)",
+            "Link": {
+                "Url": [
+                    "https://www.blackmagicdesign.com/products/fusion/compare"
+                ],
+                "Retrieved": "2026-01-22"
+            }
+        },
+        {
+            "Id": "sassanh/qnvim",
+            "Type": "Library",
+            "Description": "qnvim is a Qt Creator plugin for users who like editing text in Neovim/Vim and also want to use Qt Creator features. This plugin combines the power of Neovim and Qt Creator.",
+            "Link": {
+                "Url": [
+                    "https://github.com/sassanh/qnvim"
+                ],
+                "Retrieved": "2026-01-17"
+            },
+            "Status": [
+                {
+                    "When": "2026-01-17",
+                    "What": "Removed",
+                    "Reason": "Failed install"
+                }
+            ]
+        },
+        {
+            "Id": "qt",
+            "Type": "Suite",
+            "Description": "C++ development platform",
+            "Link": {
+                "Url": [
+                    "https://www.qt.io"
+                ],
+                "Retrieved": "2026-01-15"
+            }
+        },
+        {
+            "Id": "cgfasttrack/lazyviewport",
+            "Type": "Library",
+            "Description": "A simple addon for blender to map the standard G, R, S hotkeys to the view tools, so you don't have to use the snapping hotkeys X, Y, Z.",
+            "Link": {
+                "Url": [
+                    "https://github.com/cgfasttrack/lazyviewport"
+                ],
+                "Retrieved": "2026-01-10"
+            }
+        },
+        {
             "Id": "4K Vieo Downloader+",
             "Type": "Application",
             "Description": "4K Video Downloader Plus is a powerful and feature-rich cross-platform application that enables you to download high-quality videos from various online sources (\"4K Video Downloader Plus\". majorgeeks.com. Retrieved: 2026-01-05.)",

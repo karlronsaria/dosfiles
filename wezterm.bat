@@ -1,0 +1,2 @@
+@"%ProgramFiles%\Wezterm\wezterm.exe" %*
+

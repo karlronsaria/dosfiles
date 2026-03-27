@@ -7,6 +7,12 @@ set "command=%command%, 'steam'"
 set "command=%command%, 'steamservice'"
 set "command=%command%, 'steamhelper'"
 
+:: (karlr 2026-03-04)
+set "command=%command%, 'Overwolf'"
+set "command=%command%, 'OverwolfBrowser'"
+set "command=%command%, 'OverwolfHelper'"
+set "command=%command%, 'OverwolfHelper64'"
+
 :: (karlr 2025-09-02)
 set "command=%command%, 'MinecraftEducationUpdater'"
 

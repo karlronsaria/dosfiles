@@ -2,4 +2,5 @@ __DRAWINGBOARD/*.exe
 __OLD/
 res/large/
 reg/backup/
+log/capture/
 

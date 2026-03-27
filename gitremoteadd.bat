@@ -21,7 +21,16 @@ for %%A in ("%CD%") do set "repo=%%~nA"
 :setCmd
 set "username=karlronsaria"
 set "cmd1=git remote set-url --add --push origin https://github.com/%username%/%repo%.git"
-set "cmd2=git remote set-url --add --push origin https://codeberg.org/%username%/%repo%.git"
+set "cmd2=git remote set-url --add --push origin git@codeberg.org:%username%/%repo%.git"
+
+:: :: (karlr 2026-01-09): switch to SSH transport (scp-style SSH URL)
+:: :: - [x] issue 2026-01-09-023600
+:: ::   - where: git
+:: ::   - description: git repo with a Codeberg remote fails to push, needs to
+:: ::     re-authenticate often by opening a browser to the site
+:: ::   - solution
+:: ::     - switch to SSH transport syntax to take advantage of saved SSH keys
+:: set "cmd2=git remote set-url --add --push origin https://codeberg.org/%username%/%repo%.git"
 
 if "%~1" EQU "--whatif" goto :echo
 if "%~2" EQU "--whatif" goto :echo

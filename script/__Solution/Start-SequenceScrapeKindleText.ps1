@@ -10,7 +10,8 @@ Param(
     [ArgumentCompleter({
         Param($A, $B, $C)
 
-        . "$(Get-ProfileLocation -Default)\Scripts\PsTool\demand\Access.ps1"
+        # . "$(Get-ProfileLocation -Default)\Scripts\PsTool\demand\Access.ps1"
+        . "${env:SystemDrive}\shortcut\pwsh\Scripts\PsTool\demand\Access.ps1" | Out-Null
 
         $captions = Get-OpenWindow | foreach { $_.Caption }
         $suggests = $captions | where { $_ -like "$C*" }
@@ -34,7 +35,7 @@ Param(
 
 Import-DemandModule access
 
-if (-not (Test-OpenWindow -Caption $Caption) {
+if (-not (Test-OpenWindow -Caption $Caption)) {
     return "App window could not be found: $Caption"
 }
 
@@ -57,7 +58,7 @@ public class Keyboard
     public const byte VK_MENU = 0x12;      // Alt Key
     public const byte VK_SNAPSHOT = 0x2C;  // Print Screen Key
 
-    public static void SaveScreen()
+    public static void SaveScreenUsingDVR()
     {
         // Press keys: Win + Alt + PrtSc
         keybd_event(VK_LWIN, 0, KEYEVENTF_KEYDOWN, 0);      // Press Windows
@@ -69,16 +70,45 @@ public class Keyboard
         keybd_event(VK_MENU, 0, KEYEVENTF_KEYUP, 0);        // Release Alt
         keybd_event(VK_LWIN, 0, KEYEVENTF_KEYUP, 0);        // Release Windows
     }
+    
+    public static void ClipScreen()
+    {
+        // Press keys: Alt + PrtSc
+        keybd_event(VK_MENU, 0, KEYEVENTF_KEYDOWN, 0);      // Press Alt
+        keybd_event(VK_SNAPSHOT, 0, KEYEVENTF_KEYDOWN, 0);  // Press PrtSc
+
+        // Release keys in reverse order
+        keybd_event(VK_SNAPSHOT, 0, KEYEVENTF_KEYUP, 0);    // Release PrtSc
+        keybd_event(VK_MENU, 0, KEYEVENTF_KEYUP, 0);        // Release Alt
+    }
 }
 "@
 
 sleep 1
 
-0 .. $PageCount | foreach {
-    # Call the method to simulate the key combination
-    [Keyboard]::SaveScreen()
-    sleep 1
-    $wshell.SendKeys("{RIGHT}")
-    sleep 2
+$appCapture = Get-NoteProperty `
+    -InputObject "HKCU:/Software/Microsoft/Windows/CurrentVersion/GameDVR" `
+    -PropertyName "AppCaptureEnabled"
+
+$method = if ($null -eq $appCapture -or -not $appCapture.Success -or -not $appCapture.Value) {
+    . "${env:SystemDrive}/shortcut/pwsh/Scripts/PsMarkdown/script/ClipImage.ps1"
+
+    {
+        [Keyboard]::ClipScreen()
+
+        Save-ClipboardAsGraphic `
+            -BasePath 'C:\shortcut\dos\./log' `
+            -FolderName 'capture'
+    }
+}
+else {
+    { [Keyboard]::SaveScreenUsingDVR() }
 }
 
+0 .. $PageCount | foreach {
+    # Call the method to simulate the key combination
+    & $method
+    sleep 1
+    $wshell.SendKeys("{RIGHT}")
+    sleep 1
+}

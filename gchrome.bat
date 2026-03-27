@@ -8,7 +8,7 @@ goto runCommand
 :getNewCommand
 set "cmd=pwsh -NoProfile -Command """
 set "cmd=%cmd%; %modulePath%\Get-Scripts.ps1 ^| foreach { . $_ } "
-set "cmd=%cmd%; Run-ShortcutGoogleChromeProfile %2 %3 %4 %5 %6"
+set "cmd=%cmd%; Start-ShortcutGoogleChromeProfile %*"
 set "cmd=%cmd%"""
 
 :runCommand

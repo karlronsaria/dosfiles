@@ -1,0 +1,2 @@
+@"%ProgramFiles%\Alacritty\alacritty.exe" %*
+

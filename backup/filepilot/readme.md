@@ -4,6 +4,15 @@ Save to or load from this location: [``${env:AppData}/Voidstar/FilePilot/``](%Ap
 
 ## link
 
+- everforest
+  - credit: arctiq (Discord)
+  - retrieved: 2026-03-03
+- dusk
+  - credit: S𝕟𝕚𝕡𝕡𝕪 (Discord)
+  - retrieved: 2026-03-03
+- void-purple
+  - credit: Privox (Discord)
+  - retrieved: 2026-03-03
 - dark-pink
   - credit: lili (Discord)
   - retrieved: 2025-12-24

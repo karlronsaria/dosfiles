@@ -1,4 +1,4 @@
-function Run-ShortcutGoogleChromeProfile {
+function Start-ShortcutGoogleChromeProfile {
     [CmdletBinding(DefaultParameterSetName = "ByTags")]
     Param(
         [Parameter(ValueFromPipeline = $true)]
@@ -114,6 +114,24 @@ function Run-ShortcutGoogleChromeProfile {
     }
 }
 
+function Get-ShortcutGoogleChromeLink {
+    $setting = Get-Item "$PsScriptRoot/../res/setting.json" |
+        Get-Content |
+        ConvertFrom-Json
+
+    $response = Invoke-RestMethod `
+        -Uri "https://127.0.0.1:$($setting.RemoteDebuggingPort)/json" `
+        -ErrorAction Continue
+
+    $response |
+        foreach {
+            $_.Url
+        } |
+        where {
+            $_ -notmatch "^chrome|https?://ogs\.google\.com"
+        }
+}
+
 function Stop-ShortcutGoogleChrome {
     $setting = Get-Item "$PsScriptRoot/../res/setting.json" |
         Get-Content |
@@ -122,7 +140,7 @@ function Stop-ShortcutGoogleChrome {
     $dateTime = Get-Date -Format "yyyy-MM-dd-HHmmss" # Uses DateTimeFormat
     $filePath = "~/session_-_$($dateTime)_google-chrome-interrupt.onetab"
     $response = Invoke-RestMethod `
-        -Uri "http://127.0.0.1:$($setting.RemoteDebuggingPort)/json" `
+        -Uri "https://127.0.0.1:$($setting.RemoteDebuggingPort)/json" `
         -ErrorAction Continue
 
     if ($response) {

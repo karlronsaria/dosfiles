@@ -10,6 +10,7 @@ if "%~1" EQU "-h" goto :help
 if "%~1" EQU "todd" goto :toddmode
 if "%~1" EQU "vinny" goto :vinnymode
 if "%~1" EQU "barry" goto :barrymode
+if "%~1" EQU "chip" goto :chipmode
 if "%~1" EQU "system" goto :systemdefault
 if "%~1" EQU "" goto :systemdefault
 goto :notImplemented
@@ -27,7 +28,7 @@ set "walls=dir '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready'"
 set "pointer=ToddMode"
 set "arrows= -FilePath (dir 'C:/shortcut/dos/res/toddhoward/emote/*.ico' _bar_ Get-Random)"
 set "recyclebin=Not Skyrim"
-set "wtsettings=toddhowardfestive.json"
+set "wtsettings=toddofspring.json"
 set "toddmodeactive=1"
 goto :setcmd
 
@@ -45,6 +46,15 @@ set "pointer=BarryMode"
 set "arrows= -FilePath (dir 'C:/shortcut/dos/res/barry/ico/*.ico' _bar_ Get-Random)"
 set "recyclebin=Recycle Bin"
 set "wtsettings=barrykramer.json"
+goto :setcmd
+
+:chipmode
+set "walls=dir '%UserProfile%/Downloads/__OTHER/chip-deville-cadillackid008/pic/wallready'"
+set "pointer=ToddMode"
+set "arrows="
+set "recyclebin=Your Dick"
+set "wtsettings=chipdeville.json"
+set "chipmodeactive=1"
 goto :setcmd
 
 :setcmd
@@ -90,7 +100,8 @@ exit /b
 
 :execute
 %cmd:_bar_=|%
-if "%toddmodeactive%" EQU "1" goto :playSound
+if "%toddmodeactive%" EQU "1" call toddtime
+if "%chipmodeactive%" EQU "1" call chipintro
 exit /b
 
 :notImplemented
@@ -99,7 +110,7 @@ exit /b
 
 :help
 echo.
-echo.Usage: %~n0 [theme [--wallonly|--vscode] [--whatif]]
+echo.Usage: %~n0 ^[theme ^[--wallonly^|--vscode^] ^[--whatif^]^]
 echo.
 echo.Description:
 echo.  Changes the system appearance based on a given theme
@@ -117,6 +128,7 @@ echo.  %~n0 todd
 echo.  %~n0 vinny
 echo.  %~n0 todd --whatif
 echo.  %~n0 vinny --whatif
+echo.
 exit /b
 
 :vscode
@@ -126,6 +138,7 @@ set "backuploc=%~dp0./backup/vscode"
 if "%~1" EQU "--help" goto :help
 if "%~1" EQU "-h" goto :help
 if "%~1" EQU "todd" goto :vstoddmode
+if "%~1" EQU "chip" goto :vschipmode
 if "%~1" EQU "system" goto :vssystemdefault
 if "%~1" EQU "" goto :vssystemdefault
 goto :notImplemented
@@ -138,15 +151,18 @@ goto :vssetcmd
 set "settings=settings-main.json"
 goto :vssetcmd
 
+:vschipmode
+set "settings=settings-chipdeville.json"
+goto :vssetcmd
+
 :vssetcmd
 set "cmd=sudo pwsh"
 :: :: (karlr 2024-12-24)
 set "cmd=%cmd% -NoProfile"
 set "cmd=%cmd% -Command ""
-set "cmd=%cmd%; $null = Copy-Item '%settingsloc%/settings.json' -Dest "%backuploc%/__OLD/settings_-_$(Get-Date -f yyyy-MM-dd-HHmmss).json" -Force" :: Uses DateTimeFormat
-set "cmd=%cmd%; $null = Copy-Item "%backuploc%/%settings%" -Dest '%settingsloc%/settings.json' -Force"
+set "cmd=%cmd%$null = Copy-Item '%settingsloc%/settings.json' -Dest "%backuploc%/__OLD/settings_-_$(Get-Date -f yyyy-MM-dd-HHmmss).json" -Force" :: Uses DateTimeFormat
+set "cmd=%cmd%; $null = Copy-Item '%backuploc%/%settings%' -Dest '%settingsloc%/settings.json' -Force"
 set "cmd=%cmd%""
-:vsendSetCmd
 
 if "%~2" EQU "--whatif" goto :vsecho
 if "%~3" EQU "--whatif" goto :vsecho
@@ -164,5 +180,7 @@ exit /b
 set "sound=%~dp0./res/toddhoward/sfx/toddhoward_-_welcome-aboard-captain-[k9r0VhwBbt0].wav"
 pwsh -NoProfile -Command ^
   "(New-Object System.Media.SoundPlayer '%sound%').PlaySync()"
+exit /b
 
 exit /b
+
