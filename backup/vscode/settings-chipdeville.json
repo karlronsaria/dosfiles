@@ -75,55 +75,27 @@
     },
     "background.autoInstall": false,
     "background.editorBackgrounds": [
-        "${env:SystemDrive}/shortcut/dos/res/corey-extend.png",
-        "${env:SystemDrive}/shortcut/dos/res/barry-included-\\[IRauEbkYRYA\\].gif",
-        "${env:SystemDrive}/shortcut/dos/res/barry-tableflip-extent.png",
-        "${env:SystemDrive}/shortcut/dos/res/derek-muller.png",
-        "${env:SystemDrive}/shortcut/dos/res/do-the-corey-mirrored-alpha-small.gif",
-        "${env:SystemDrive}/shortcut/dos/res/jacksfilms-chair-therapy-extended.png",
-        "${env:SystemDrive}/shortcut/dos/res/jacksfilms-point-wide-cornerfade.png",
-        "${env:SystemDrive}/shortcut/dos/res/jakey-00-extended.png",
-        "${env:SystemDrive}/shortcut/dos/res/sean-murray-001.png",
-        "${env:SystemDrive}/shortcut/dos/res/sean-murray-004.png",
-        "${env:SystemDrive}/shortcut/dos/res/wendigoon-taking-notes.png",
-        "${env:SystemDrive}/shortcut/dos/res/toddhoward/todd_howard_lean-removebg.png",
-        "${env:SystemDrive}/shortcut/dos/res/toddhoward/todd_howard_033_flipped-removebg.png",
-        "${env:SystemDrive}/shortcut/dos/res/vinesauce/vinny-extended-centered-alphagradient.png",
-        "${env:SystemDrive}/shortcut/dos/res/vinesauce/vinny-speen.gif",
-        "${env:SystemDrive}/shortcut/dos/res/volodymyr-zelenskyy-sitting-across-001-extend.png",
-        "${env:SystemDrive}/shortcut/dos/res/jeptickeye-cute.png",
-        "${env:SystemDrive}/shortcut/dos/res/chris-ray-gun-extend.gif"
+        "${env:SystemDrive}/shortcut/dos/res/chip-cool-smirk-extend.png"
     ],
     "background.windowBackgrounds": [
-        "${env:SystemDrive}/shortcut/dos/res/large/4k-stock-space-motion-\\[shutterstock-3490952995\\].gif",  // sean-murray, todd-howard, derek-muller
-        "${env:SystemDrive}/shortcut/dos/res/large/disney-channel-original-loop.gif",                     // nakey-jakey
-        "${env:SystemDrive}/shortcut/dos/res/large/downward-spiral-\\[FK1RSLOyCns\\].gif",
-        "${env:SystemDrive}/shortcut/dos/res/large/fly-me-\\[nLLSk6bR228\\].gif",
-        "${env:SystemDrive}/shortcut/dos/res/large/hey-pops-\\[5oPt7UvVndw\\].gif",                           // vinesauce
-        "${env:SystemDrive}/shortcut/dos/res/large/hey-you-youre-finally-awake-\\[YeeK_TPOltk\\].gif",        // todd-howard
-        "${env:SystemDrive}/shortcut/dos/res/large/joel-vinesauce-agga-\\[G5FdQrfwLw\\].gif",                 // vinesauce
-        "${env:SystemDrive}/shortcut/dos/res/large/maurice-is-an-annoying-time-wizard-\\[2IGmuyEsiDs\\].gif",
-        "${env:SystemDrive}/shortcut/dos/res/large/no-one-is-around-to-help-\\[yD2FSwTy2lw\\].gif",
-        "${env:SystemDrive}/shortcut/dos/res/large/paulie-bloodbath-\\[2-FBagMS2Bk\\].gif",                   // vinesauce
-        "${env:SystemDrive}/shortcut/dos/res/large/rotate-the-background-20fps-\\[knowyourmeme\\].gif",
-        "${env:SystemDrive}/shortcut/dos/res/large/steamed-hams-x10-\\[4jXEuIHY9ic\\].gif",                   // jacksfilms, vinesauce
-        "${env:SystemDrive}/shortcut/dos/res/large/vinny-dedication-\\[brt1gCgVN_Y\\].gif",                   // vinesauce
-        "${env:SystemDrive}/shortcut/dos/res/large/encino-man-1992-loop.gif",                             // nakey-jakey
-        "${env:SystemDrive}/shortcut/dos/res/toddhoward/various-todds.jpg",                               // todd-howard
-        "${env:SystemDrive}/shortcut/dos/res/vinesauce/red-vox-another-light-Cover-Art-2.jpg",            // vinesauce
-        "${env:SystemDrive}/shortcut/dos/res/collatz-tree-veritasium-\\[094y1Z2wpJg\\].png",                  // derek-muller
-        "${env:SystemDrive}/shortcut/dos/res/eoe-000.png",                                                // jacksfilms
-        "${env:SystemDrive}/shortcut/dos/res/eoe-001.jpg",                                                // jacksfilms
-        "${env:SystemDrive}/shortcut/dos/res/Animated_fire_by_nevit.gif",                                 // hellmo, dumpster-fire
-        "${env:SystemDrive}/shortcut/dos/res/horse-plinko-00-\\[knowyourmeme\\].gif",
-        "${env:SystemDrive}/shortcut/dos/res/large/pants-duck-\\[1PaKYvMdH3o\\].gif",
-        "${env:SystemDrive}/shortcut/dos/res/large/gaming-journalism-720-\\[BpNBLRKAcg0\\].gif"
+        "${env:SystemDrive}/shortcut/dos/res/do-the-corey-mirrored-alpha-small.gif",
+        "${env:SystemDrive}/shortcut/dos/res/large/chip-deville/35102559_10156696969476844_7446574187105222656_n.jpg",
+        "${env:SystemDrive}/shortcut/dos/res/large/chip-deville/468225536_10162707347231844_620245526599756096_n-crop.jpg",
+        "${env:SystemDrive}/shortcut/dos/res/large/chip-deville/468963711_10162887086416844_5728748156684298094_n.jpg",
+        "${env:SystemDrive}/shortcut/dos/res/large/chip-deville/469456523_10162964363136844_4650811085380350098_n.jpg",
+        "${env:SystemDrive}/shortcut/dos/res/large/chip-deville/471916575_10163069339336844_2892167709186020069_n.jpg",
+        "${env:SystemDrive}/shortcut/dos/res/large/chip-deville/471985458_10163082508521844_8039751247647302881_n-crop.jpg",
+        "${env:SystemDrive}/shortcut/dos/res/large/chip-deville/472205492_10163151022216844_8661484426004705013_n-crop.jpg",
+        "${env:SystemDrive}/shortcut/dos/res/large/chip-deville/472528458_10163140503586844_1449316229169565035_n-crop.jpg",
+        "${env:SystemDrive}/shortcut/dos/res/large/chip-deville/49167919_10157228773511844_6025353810753355776_n.jpg",
+        "${env:SystemDrive}/shortcut/dos/res/large/chip-deville/517940970_10163990066676844_4710836156257035437_n-crop.jpg",
+        "${env:SystemDrive}/shortcut/dos/res/large/chip-deville/517940970_10163990066676844_4710836156257035437_n.jpg"
     ],
     "background.backgroundOpacity": [
-        0.94,
-        0.65,
+        0.85,
+        0.20,
         0.9,
-        0.9,
+        0.9
     ],
     "editor.fontLigatures": true,
     "editor.fontFamily": "\"Fira Code\", monospace",
