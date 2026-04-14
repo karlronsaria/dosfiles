@@ -1,8 +1,115 @@
 {
     "Packages": [
         {
+            "Id": "edenaion/EZ-CorridorKey",
+            "Type": "Application",
+            "Description": "A full desktop GUI for Niko Pueringer's CorridorKey — the AI green screen keyer by Corridor Digital that physically unmixes foreground from background, preserving hair, motion blur, and translucency.",
+            "Link": {
+                "Url": [
+                    "https://github.com/edenaion/EZ-CorridorKey"
+                ],
+                "Retrieved": "2026-04-14"
+            }
+        },
+        {
+            "Id": "nikopueringer/CorridorKey",
+            "Type": "Docker Container Image",
+            "Description": "You input a raw green screen frame, and the neural network completely separates the foreground object from the green screen.",
+            "Link": {
+                "Url": [
+                    "https://github.com/nikopueringer/CorridorKey"
+                ],
+                "Retrieved": "2026-04-14"
+            }
+        },
+        {
+            "Id": "astral-sh/uv",
+            "Type": ["Suite", "Package Manager"],
+            "Description": "An extremely fast Python package and project manager, written in Rust.",
+            "Link": {
+                "Url": [
+                    "https://docs.astral.sh/uv/",
+                    "https://github.com/astral-sh/uv"
+                ],
+                "Retrieved": "2026-04-14"
+            },
+            "Howto": {
+                "Install": [
+                    { "powershell": "irm https://astral.sh/uv/install.ps1 | iex" }
+                ]
+            }
+        },
+        {
+            "Id": "siderob/DaumEquationEditorPortableApp",
+            "Type": ["Application", "Standalone"],
+            "Description": "Create formulas with the click of a button.",
+            "Link": {
+                "Url": [
+                    "https://github.com/siderob/DaumEquationEditorPortableApp"
+                ],
+                "Retrieved": "2026-04-12"
+            }
+        },
+        {
+            "Id": "MathCast",
+            "Type": "Application",
+            "Description": "MathCast is an equation editor, an application that allows you to input mathematical equations.",
+            "Link": {
+                "Url": [
+                    "https://mathcast.sourceforge.net/"
+                ]
+            },
+            "Retrieved": "2026-04-12"
+        },
+        {
+            "Id": "FULU-Foundation/CRW-Extension",
+            "Type": "Google Chrome Browser Extension",
+            "Description": "Consumer Rights Wiki",
+            "Link": {
+                "Url": [
+                    "https://chromewebstore.google.com/detail/consumer-rights-wiki/bppajinomefndbbmopljhbdfefnefdha",
+                    "https://github.com/FULU-Foundation/CRW-Extension"
+                ]
+            },
+            "Retrieved": "2026-04-07"
+        },
+        {
+            "Id": "HiveGamesOSS/Chunker-CLI",
+            "Type": ["Application", "Standalone"],
+            "Description": "A CLI for HiveGamesOSS/Chunker",
+            "Link": {
+                "Nav": [
+                    "Go to <https://www.chunker.app/>",
+                    "Click on **Windows (x86)**",
+                    "Click on **Windows CLI (x86)**"
+                ],
+                "Url": [
+                    "<https://www.chunker.app/>",
+                    "<https://github.com/HiveGamesOSS/Chunker/releases>",
+                    "<https://minecraft.wiki/w/Chunker>"
+                ],
+                "Retrieved": "2026-04-07"
+            }
+        },
+        {
+            "Id": "HiveGamesOSS/Chunker",
+            "Type": ["Application", "Standalone"],
+            "Description": [
+                "version manager for Minecraft worlds",
+                "Chunker is a free and open-source tool developed by Hive Games which can convert worlds between Java Edition and Bedrock Edition. Its development is funded by Mojang Studios to make an open-source version of the tool available. It is also recommended as tool for world conversion for mapmakers in the Bedrock Edition creator documentation, and in the Minecraft Launcher. (\"Chunker\". minecraft.wiki. Retrieved: 2026-04-07.)"
+            ],
+            "Link": {
+                "Url": [
+                    "<https://www.chunker.app/>",
+                    "<https://github.com/HiveGamesOSS/Chunker/releases>",
+                    "<https://minecraft.wiki/w/Chunker>"
+                ],
+                "Retrieved": "2026-04-07"
+            }
+        },
+        {
             "Id": "fccview/degoog",
-            "Type": "Docker Container",
+            "Type": "Docker Container Image",
             "Description": "Search aggregator that queries multiple engines and shows results in one place. You can add custom search engines, bang-command plugins, and slot plugins (query-triggered panels above/below results or in the sidebar). The dream would be to eventually have a user made marketplace for plugins/engines.",
             "Link": {
                 "Url": [
