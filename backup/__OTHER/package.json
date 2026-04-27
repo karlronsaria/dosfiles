@@ -1,6 +1,30 @@
 {
     "Packages": [
         {
+            "Id": "iorate/ublacklist",
+            "Type": "Google Chrome Browser Extension",
+            "Description": "Blocks sites you specify from appearing in Google search results",
+            "Link": {
+                "Url": [
+                    "https://chromewebstore.google.com/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe",
+                    "https://github.com/iorate/ublacklist"
+                ],
+                "Retrieved": "2026-04-16"
+            }
+        },
+        {
+            "Id": "Kamo-Chip/yt-equity",
+            "Type": "Google Chrome Browser Extension",
+            "Description": "This lightweight extension surfaces whether a YouTube channel is backed or owned by private equity, right on the channel page or video view.",
+            "Link": {
+                "Url": [
+                    "https://chromewebstore.google.com/detail/yt-equity/jdoggmmhbhcbfpddoljebjmcfiibfhgl",
+                    "https://github.com/Kamo-Chip/yt-equity"
+                ],
+                "Retrieved": "2026-04-15"
+            }
+        },
+        {
             "Id": "edenaion/EZ-CorridorKey",
             "Type": "Application",
             "Description": "A full desktop GUI for Niko Pueringer's CorridorKey — the AI green screen keyer by Corridor Digital that physically unmixes foreground from background, preserving hair, motion blur, and translucency.",

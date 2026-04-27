@@ -1,5 +1,7 @@
+# [DEPRECATED] (karlr 2026-04-26): Use PsFrivolous instead.
 
 function Set-Cursor {
+    # (karlr 2026-04-26): Never used. Did I forget to use it, or does it no longer work?
     function Start-CursorRefresh {
         <#
         .LINK
@@ -58,4 +60,5 @@ public static extern bool SystemParametersInfo(
 
     # Notify the system of the change
     RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters ,1 ,True
+}
 

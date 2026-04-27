@@ -12,6 +12,12 @@ choco export
 choco install .\packages.config
 ```
 
+## get list of pinned packages
+
+```powershell
+choco pin list
+```
+
 ---
 
 [← Go Back](../../readme.md)

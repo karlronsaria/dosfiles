@@ -54,3 +54,4 @@ function Install-NerdFonts {
         Write-Error "Failed to download or install ${FontDisplayName} font. Error: $_"
     }
 }
+

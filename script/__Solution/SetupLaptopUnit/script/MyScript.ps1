@@ -88,7 +88,7 @@ function Install-Chocolatey {
     Set-ExecutionPolicy 'Bypass' -Scope 'Process' -Force
     [System.Net.ServicePointManager]::SecurityProtocol =
         [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
-    iex ((New-Object System.Net.WebClient).DownloadString($url))
+    Invoke-Expression ((New-Object System.Net.WebClient).DownloadString($url))
 }
 
 function Install-MyPackage {
@@ -104,7 +104,7 @@ function Install-MyPackage {
         return $cmd
     }
 
-    iex $cmd
+    Invoke-Expression $cmd
 }
 
 function Save-LastAction {
@@ -146,7 +146,7 @@ function Remove-LastLoginUser {
         return $cmd
     }
 
-    iex $cmd
+    Invoke-Expression $cmd
 }
 
 function Add-ItemToStartMenu {

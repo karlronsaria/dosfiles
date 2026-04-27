@@ -9,16 +9,16 @@ Permanantly and forcefully removes Microsoft Edge, and attempts to make auto-rei
 
 .LINK
 - What: motive
-    - Url: <https://www.youtube.com/watch?v=w8EGomuEX8s&t=140s>
-    - Retrieved: 2024-02-02
+- Url: <https://www.youtube.com/watch?v=w8EGomuEX8s&t=140s>
+- Retrieved: 2024-02-02
 .LINK
 - What: howto uninstall, prevent reinstall
-    - Url: <https://www.tomsguide.com/how-to/how-to-uninstall-microsoft-edge>
-    - Retrieved: 2024-02-02
+- Url: <https://www.tomsguide.com/how-to/how-to-uninstall-microsoft-edge>
+- Retrieved: 2024-02-02
 .LINK
 - What: howto remove AppX package
-    - Url: <https://www.process.st/how-to/uninstall-microsoft-edge/>
-    - Retrieved: 2024-02-02
+- Url: <https://www.process.st/how-to/uninstall-microsoft-edge/>
+- Retrieved: 2024-02-02
 #>
 
 # *********************
@@ -28,9 +28,9 @@ Permanantly and forcefully removes Microsoft Edge, and attempts to make auto-rei
 $app_path = "${env:ProgramFiles(x86)}\Microsoft\Edge\Application\*\Installer\setup.exe"
 $app_args = "setup.exe --uninstall --system-level --verbose-logging --force-uninstall"
 
-dir $app_path -Recurse |
-foreach {
-    iex "$app_path $app_args"
+Get-ChildItem $app_path -Recurse |
+ForEach-Object {
+    Invoke-Expression "$app_path $app_args"
 }
 
 # ********************************
