@@ -4,6 +4,7 @@ if "%~2" EQU "--vscode" goto :vscode
 
 set "wtsettingsloc=%LocalAppData%/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
 set "wtbackuploc=%~dp0./backup/winterminal"
+set "wallonly"=0
 
 if "%~1" EQU "--help" goto :help
 if "%~1" EQU "-h" goto :help
@@ -36,7 +37,7 @@ goto :setcmd
 set "walls=dir '%UserProfile%/Downloads/__OTHER/vinny/pic/wallready'"
 set "pointer=VinnyMode"
 set "arrows= -FilePath (dir 'C:/shortcut/dos/res/vinesauce/ico/*.ico' _bar_ Get-Random)"
-set "recyclebin=Action 52"
+set "recyclebin=Suddam Hussein's Dumpster"
 set "wtsettings=vinnyvinesauce.json"
 goto :setcmd
 
@@ -78,6 +79,7 @@ goto :mainCmd
 
 :wallonly
 set "cmd=%cmd%; %wallCmd%"
+set "wallonly=1"
 goto :endSetCmd
 
 :mainCmd
@@ -100,6 +102,7 @@ exit /b
 
 :execute
 %cmd:_bar_=|%
+if "%wallonly%" EQU "1" goto :eof
 if "%toddmodeactive%" EQU "1" call toddtime
 if "%chipmodeactive%" EQU "1" call chipintro
 exit /b

@@ -1,0 +1,9 @@
+chrome.exe
+firefox.exe
+MicrosoftEdge.exe
+iexplore.exe
+brave.exe
+librewolf.exe
+arc.exe
+helium.exe  # 2026-05-07
+

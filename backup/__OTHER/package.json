@@ -1,6 +1,18 @@
 {
     "Packages": [
         {
+            "Id": "pfish/no-gemini",
+            "Type": "Google Chrome Browser Extension",
+            "Description": "Hides AI-generated elements from Google properties, like search results, Google Drive, and more.",
+            "Link": {
+                "Url": [
+                    "https://chromewebstore.google.com/detail/hide-gemini-and-google-ai/ggneoaeoplbpehkojnifancipajnhcbp",
+                    "https://code.pfish.zone/personal/no-gemini"
+                ],
+                "Retrieved": "2026-05-11"
+            }
+        },
+        {
             "Id": "iorate/ublacklist",
             "Type": "Google Chrome Browser Extension",
             "Description": "Blocks sites you specify from appearing in Google search results",

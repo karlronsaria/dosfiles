@@ -1,3 +1,9 @@
+<#
+.LINK
+* SomeOrdinaryGamers - Delete Google Chrome Right Now
+  - Url: <https://www.youtube.com/watch?v=Fx46DedxWAY>
+  - Retrieved: 2026-05-06
+#>
 function Start-ShortcutGoogleChromeProfile {
     [CmdletBinding(DefaultParameterSetName = "ByTags")]
     Param(
@@ -38,6 +44,22 @@ function Start-ShortcutGoogleChromeProfile {
     )
 
     Begin {
+        # link: SomeOrdinaryGamers - Delete Google Chrome Right Now
+        # - url: <https://www.youtube.com/watch?v=Fx46DedxWAY>
+        # - retrieved: 2026-05-06
+        function Remove-CompulsoryMalware {
+            @(
+                "${env:LOCALAPPDATA}/Google/Chrome/User Data/OptGuideOnDeviceModel"
+            ) |
+            Get-Item -ErrorAction SilentlyContinue |
+            ForEach-Object {
+                $_
+                Remove-Item $_.FullName -Force -Recurse
+            }
+
+            return $null
+        }
+
         function ConvertTo-ShortcutGoogleChromeProfileName {
             Param(
                 [Int]
@@ -64,15 +86,15 @@ function Start-ShortcutGoogleChromeProfile {
             return "& `"$AppLocation`" --args --profile-directory=`"$ProfileName`""
         }
 
-        $setting = Get-Content "$PsScriptRoot/../res/setting.json" `
-            | ConvertFrom-Json
+        $setting = Get-Content "$PsScriptRoot/../res/setting.json" |
+            ConvertFrom-Json
 
         if ($PsCmdlet.ParameterSetName -eq "ByTags") {
             $haystack = $setting.Profiles
             $needles = @()
 
             foreach ($tag in $ProfileTags) {
-                $needles += @($haystack | where {
+                $needles += @($haystack | Where-Object {
                     $tag -in $_.Tags
                 })
             }
@@ -99,7 +121,7 @@ function Start-ShortcutGoogleChromeProfile {
     }
 
     Process {
-        $urls += ' ' + (($Url | foreach { "`"${psitem}`"" }) -join ' ')
+        $urls += ' ' + (($Url | ForEach-Object { "`"${psitem}`"" }) -join ' ')
     }
 
     End {
@@ -109,7 +131,13 @@ function Start-ShortcutGoogleChromeProfile {
             $command
         }
         else {
-            iex $command
+            Invoke-Expression $command
+            $stop = [System.Diagnostics.Stopwatch]::StartNew()
+
+            # (karlr 2026-05-06)
+            while (-not (Remove-CompulsoryMalware) -and $stop.Elapsed.TotalSeconds -lt 3) {
+                Start-Sleep -Milliseconds 100
+            }
         })
     }
 }
@@ -124,10 +152,10 @@ function Get-ShortcutGoogleChromeLink {
         -ErrorAction Continue
 
     $response |
-        foreach {
+        ForEach-Object {
             $_.Url
         } |
-        where {
+        Where-Object {
             $_ -notmatch "^chrome|https?://ogs\.google\.com"
         }
 }
@@ -145,10 +173,10 @@ function Stop-ShortcutGoogleChrome {
 
     if ($response) {
         $links = $response |
-        foreach {
+        ForEach-Object {
             $_.Url
         } |
-        where {
+        Where-Object {
             $_ -notmatch "^chrome|https?://ogs\.google\.com"
         }
 
@@ -183,8 +211,8 @@ function Open-ShortcutGoogleChromeSession {
 
     Get-Item $FilePath |
     Get-Content |
-    where { $_ } |
-    foreach {
+    Where-Object { $_ } |
+    ForEach-Object {
         $url = [regex]::Match($_, "[^|]+").Value
         Start-Process `
             -FilePath $setting.AppLocation `
