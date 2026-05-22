@@ -16,6 +16,7 @@ A collection of shortcut DOS files
 
 - [ShortcutGoogleChrome](./pwsh/ShortcutGoogleChrome/readme.md)
 - ~~[ShortcutFfmpeg](./pwsh/__RTFM/ShortcutFfmpeg/readme.md)~~ **RTFM**
+- [action](./action/readme.md)
 
 ## task
 
