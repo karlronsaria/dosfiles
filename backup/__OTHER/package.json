@@ -1,6 +1,30 @@
 {
     "Packages": [
         {
+            "Id": "elvinova/LaFrance",
+            "Type": "Typeface",
+            "Description": "La france is a simple cursive font, rustic font perfect for branding projects, home ware designs, product packaging or simply as a stylish text overlay to any background image or posters.",
+            "Link": {
+                "Url": [
+                    "https://www.dfonts.org/fonts/la-france-font/"
+                ],
+                "Retrieved": "2026-06-28"
+            }
+        },
+        {
+            "Id": "KevinPayravi/indie-wiki-buddy",
+            "Type": "Google Chrome Browser Extension",
+            "Description": "Indie Wiki Buddy helps you discover quality, independent wikis through alerts, redirects, and search filtering.",
+            "Link": {
+                "Url": [
+                    "https://chromewebstore.google.com/detail/indie-wiki-buddy/fkagelmloambgokoeokbpihmgpkbgbfm",
+                    "https://github.com/KevinPayravi/indie-wiki-buddy",
+                    "chrome-extension://fkagelmloambgokoeokbpihmgpkbgbfm/pages/settings/index.html"
+                ],
+                "Retrieved": "2026-06-20"
+            }
+        },
+        {
             "Id": "pfish/no-gemini",
             "Type": "Google Chrome Browser Extension",
             "Description": "Hides AI-generated elements from Google properties, like search results, Google Drive, and more.",

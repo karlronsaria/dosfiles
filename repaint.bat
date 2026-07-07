@@ -4,7 +4,7 @@ if "%~2" EQU "--vscode" goto :vscode
 
 set "wtsettingsloc=%LocalAppData%/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
 set "wtbackuploc=%~dp0./backup/winterminal"
-set "wallonly"=0
+set "silent=0"
 
 if "%~1" EQU "--help" goto :help
 if "%~1" EQU "-h" goto :help
@@ -29,7 +29,7 @@ set "walls=dir '%UserProfile%/Downloads/__OTHER/toddhoward/pic/wallready'"
 set "pointer=ToddMode"
 set "arrows= -FilePath (dir 'C:/shortcut/dos/res/toddhoward/emote/*.ico' _bar_ Get-Random)"
 set "recyclebin=Not Skyrim"
-set "wtsettings=toddofspring.json"
+set "wtsettings=toddhoward.json"
 set "toddmodeactive=1"
 goto :setcmd
 
@@ -73,13 +73,16 @@ set "cmd=%cmd% -Command ""
 :: set "cmd=%cmd%Import-DemandModule PsFrivolous, theme -Mode And"
 set "cmd=%cmd%. \shortcut\pwsh\Scripts\PsFrivolous\demand\Theme.ps1"
 
+if "%~2" EQU "--quiet" set "quiet=1"
+if "%~3" EQU "--quiet" set "quiet=1"
+
 if "%~2" EQU "--wallonly" goto :wallonly
 if "%~3" EQU "--wallonly" goto :wallonly
 goto :mainCmd
 
 :wallonly
 set "cmd=%cmd%; %wallCmd%"
-set "wallonly=1"
+set "quiet=1"
 goto :endSetCmd
 
 :mainCmd
@@ -102,7 +105,7 @@ exit /b
 
 :execute
 %cmd:_bar_=|%
-if "%wallonly%" EQU "1" goto :eof
+if "%quiet%" EQU "1" goto :eof
 if "%toddmodeactive%" EQU "1" call toddtime
 if "%chipmodeactive%" EQU "1" call chipintro
 exit /b
@@ -113,7 +116,7 @@ exit /b
 
 :help
 echo.
-echo.Usage: %~n0 ^[theme ^[--wallonly^|--vscode^] ^[--whatif^]^]
+echo.Usage: %~n0 ^[theme ^[--wallonly^|--vscode^|--quiet^] ^[--whatif^]^]
 echo.
 echo.Description:
 echo.  Changes the system appearance based on a given theme
@@ -121,6 +124,7 @@ echo.
 echo.Options:
 echo.  --wallonly  Changes the wallpaper ^(desktop background^) only
 echo.  --vscode    Switches to VS Code Mode: Swaps out the User Settings file ^(settings.json^)
+echo.  --quiet     Specifies to refrain from playing media at the end of execution
 echo.  --whatif    Echoes the full command
 echo.  --help      Shows this help message
 echo.    -h

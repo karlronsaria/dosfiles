@@ -16,10 +16,10 @@ function Rename-DateTimeString {
                     -ExpandProperty Extension `
                     -Unique
 
-            $patterns = $ext | foreach { "*$_" }
+            $patterns = $ext | ForEach-Object { "*$_" }
 
             $suggest = $patterns |
-                where {
+                Where-Object {
                     $_ -like "$C*"
                 }
 
@@ -69,7 +69,7 @@ function Rename-DateTimeString {
         }
 
         try {
-            foreach ($path in @($FilePath | where { $_ })) {
+            foreach ($path in @($FilePath | Where-Object { $_ })) {
                 $item = Resolve-Path $path |
                     Get-Item
 
@@ -145,10 +145,10 @@ function Update-DateTimeString {
                     -ExpandProperty Extension `
                     -Unique
 
-            $patterns = $ext | foreach { "*$_" }
+            $patterns = $ext | ForEach-Object { "*$_" }
 
             $suggest = $patterns |
-                where {
+                Where-Object {
                     $_ -like "$C*"
                 }
 
@@ -230,7 +230,7 @@ function Update-DateTimeString {
                 $allFiles = Get-ChildItem $All -Recurse:$Recurse
 
                 $results = $allFiles |
-                    foreach -Begin {
+                    ForEach-Object -Begin {
                         $count = 0
                     } -Process {
                         Write-Progress `
@@ -333,8 +333,8 @@ function Compare-DateTimeString {
 
     $diff = Compare-Object -Ref $leftChars -Dif $rghtChars
 
-    $left = $diff | where { $_.SideIndicator -like '<*' }
-    $rght = $diff | where { $_.SideIndicator -like '*>' }
+    $left = $diff | Where-Object { $_.SideIndicator -like '<*' }
+    $rght = $diff | Where-Object { $_.SideIndicator -like '*>' }
 
     $diffCountsMatch = @($left).Count -eq @($rght).Count
 
