@@ -30,7 +30,10 @@ Param(
     $Caption,
 
     [Int]
-    $PageCount = -1
+    $PageCount = -1,
+
+    [int]
+    $WaitMilliseconds = 1000
 )
 
 Import-DemandModule access
@@ -84,14 +87,14 @@ public class Keyboard
 }
 "@
 
-sleep 1
+sleep -Milliseconds $WaitMilliseconds
 
 $appCapture = Get-NoteProperty `
     -InputObject "HKCU:/Software/Microsoft/Windows/CurrentVersion/GameDVR" `
     -PropertyName "AppCaptureEnabled"
 
 $method = if ($null -eq $appCapture -or -not $appCapture.Success -or -not $appCapture.Value) {
-    . "${env:SystemDrive}/shortcut/pwsh/Scripts/PsMarkdown/script/ClipImage.ps1"
+    . "${env:SystemDrive}/shortcut/pwsh/Scripts/PsMarkdown/script/ClipGraphic.ps1"
 
     {
         [Keyboard]::ClipScreen()

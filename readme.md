@@ -31,6 +31,7 @@ A collection of shortcut DOS files
 
 ---
 
-[Todo List](./doc/todo.md)
+[To-do List](./doc/todo.md)
 [Wish List](./doc/wish.md)
+[Issues](./doc/issue.md)
 

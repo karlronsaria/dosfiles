@@ -75,10 +75,21 @@
     },
     "background.autoInstall": false,
     "background.editorBackgrounds": [
+        "${env:SystemDrive}/Users/karlr/Downloads/__OTHER/__pic/theme/vscode/male-model-000-tran-xflip-glow-extend.png",
+        "${env:SystemDrive}/Users/karlr/Downloads/__OTHER/__pic/theme/vscode/scaffold-crew-boy-000-tran-crop-glow-extend.png",
+        "${env:SystemDrive}/Users/karlr/Downloads/__OTHER/baker-mayfield/pic/theme/vscode/baker-mayfield-underwear-000.png",
+        "${env:SystemDrive}/Users/karlr/Downloads/__OTHER/chip-deville-cadillackid008/pic/theme/vscode/chip-cool-smirk-extend.png",
+        "${env:SystemDrive}/Users/karlr/Downloads/__OTHER/james-lewell-nitrorad/pic/theme/vscode/james-lewell-nitrorad-000-tran-extend-glow-green.png",
+        "${env:SystemDrive}/Users/karlr/Downloads/__OTHER/scooby-werkstatt/pic/theme/vscode/scooby-running-a-triathlon.png",
+        "${env:SystemDrive}/Users/karlr/Downloads/__OTHER/stephen-farrelly-sheamus/pic/theme/vscode/sheamus-swagger-preview-crop-extend.png",
+        "${env:SystemDrive}/Users/karlr/Downloads/__OTHER/steve-carell/pic/theme/vscode/steve-carell-lean-000-extend.png",
+        "${env:SystemDrive}/Users/karlr/Downloads/__OTHER/steve-carell/pic/theme/vscode/steve-carell-lean-001.png",
+        "${env:SystemDrive}/Users/karlr/Downloads/__OTHER/steve-carell/pic/theme/vscode/steve-carell-lean-002-extend.png",
+        "${env:SystemDrive}/Users/karlr/Downloads/__OTHER/steve-carell/pic/theme/vscode/steve-carell-stride-000-extend.png",
         "${env:SystemDrive}/shortcut/dos/res/corey-extend.png",
         "${env:SystemDrive}/shortcut/dos/res/barry-included-\\[IRauEbkYRYA\\].gif",
-        "${env:SystemDrive}/shortcut/dos/res/barry-tableflip-extent.png",
-        "${env:SystemDrive}/shortcut/dos/res/derek-muller.png",
+        "${env:SystemDrive}/shortcut/dos/res/barry-tableflip-extend.png",
+        "${env:SystemDrive}/shortcut/dos/res/derek-muller-\\[9DrBQg_n2Uo\\].png",
         "${env:SystemDrive}/shortcut/dos/res/do-the-corey-mirrored-alpha-small.gif",
         "${env:SystemDrive}/shortcut/dos/res/jacksfilms-chair-therapy-extended.png",
         "${env:SystemDrive}/shortcut/dos/res/jacksfilms-point-wide-cornerfade.png",
@@ -95,6 +106,7 @@
         "${env:SystemDrive}/shortcut/dos/res/chris-ray-gun-extend.gif"
     ],
     "background.windowBackgrounds": [
+        "${env:SystemDrive}/shortcut/dos/res/compiling-shaders-\\[RYedf3H2Fg4\\].png",
         "${env:SystemDrive}/shortcut/dos/res/large/4k-stock-space-motion-\\[shutterstock-3490952995\\].gif",  // sean-murray, todd-howard, derek-muller
         "${env:SystemDrive}/shortcut/dos/res/large/disney-channel-original-loop.gif",                     // nakey-jakey
         "${env:SystemDrive}/shortcut/dos/res/large/downward-spiral-\\[FK1RSLOyCns\\].gif",

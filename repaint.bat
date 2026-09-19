@@ -37,7 +37,7 @@ goto :setcmd
 set "walls=dir '%UserProfile%/Downloads/__OTHER/vinny/pic/wallready'"
 set "pointer=VinnyMode"
 set "arrows= -FilePath (dir 'C:/shortcut/dos/res/vinesauce/ico/*.ico' _bar_ Get-Random)"
-set "recyclebin=Suddam Hussein's Dumpster"
+set "recyclebin=Saddam Hussein's Dumpster"
 set "wtsettings=vinnyvinesauce.json"
 goto :setcmd
 
@@ -65,7 +65,7 @@ set "wallCmd=%wallCmd% _bar_ foreach { if ($_.PsIsContainer) { dir $_ _bar_ Get-
 set "wallCmd=%wallCmd% _bar_ foreach { $_.FullName }"
 set "wallCmd=%wallCmd% _bar_ Set-Wallpaper"
 
-set "cmd=sudo pwsh"
+set "cmd=pwsh"
 :: :: (karlr 2024-12-24)
 set "cmd=%cmd% -NoProfile"
 set "cmd=%cmd% -Command ""
@@ -104,7 +104,7 @@ echo %cmd:_bar_=|%
 exit /b
 
 :execute
-%cmd:_bar_=|%
+sudo %cmd:_bar_=|%
 if "%quiet%" EQU "1" goto :eof
 if "%toddmodeactive%" EQU "1" call toddtime
 if "%chipmodeactive%" EQU "1" call chipintro
@@ -163,7 +163,7 @@ set "settings=settings-chipdeville.json"
 goto :vssetcmd
 
 :vssetcmd
-set "cmd=sudo pwsh"
+set "cmd=pwsh"
 :: :: (karlr 2024-12-24)
 set "cmd=%cmd% -NoProfile"
 set "cmd=%cmd% -Command ""
@@ -180,7 +180,7 @@ echo %cmd:_bar_=|%
 exit /b
 
 :vsexecute
-%cmd:_bar_=|%
+sudo %cmd:_bar_=|%
 exit /b
 
 :playSound

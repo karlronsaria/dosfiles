@@ -1,2 +1,2 @@
-@pwsh -NoExit -Command ". %OneDrive%\Documents\WindowsPowerShell\hellfile.ps1"
+@pwsh -NoExit -Command ". %UserProfile%\Documents\WindowsPowerShell\hellfile.ps1"
 

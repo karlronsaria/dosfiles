@@ -156,7 +156,7 @@ function Get-ShortcutGoogleChromeLink {
             $_.Url
         } |
         Where-Object {
-            $_ -notmatch "^chrome|https?://ogs\.google\.com"
+            $_ -notmatch "^chrome|https?://ogs/.google/.com"
         }
 }
 
@@ -177,7 +177,7 @@ function Stop-ShortcutGoogleChrome {
             $_.Url
         } |
         Where-Object {
-            $_ -notmatch "^chrome|https?://ogs\.google\.com"
+            $_ -notmatch "^chrome|https?://ogs/.google/.com"
         }
 
         $links |
@@ -219,4 +219,3 @@ function Open-ShortcutGoogleChromeSession {
             -ArgumentList $url
     }
 }
-

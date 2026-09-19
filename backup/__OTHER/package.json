@@ -1,6 +1,39 @@
 {
     "Packages": [
         {
+            "Id": "Autodesk Fusion",
+            "Type": "Application",
+            "Link": {
+                "Url": [
+                    "https://www.autodesk.com/products/fusion-360/appstream"
+                ],
+                "Retrieved": "2026-09-08"
+            }
+        },
+        {
+            "Id": "PlummersSoftwareLLC/tmog",
+            "Type": "Application",
+            "Description": "TMOG brings the depth of a serious systems console to a native, focused task manager for macOS, Windows, and Linux.",
+            "Link": {
+                "Url": [
+                    "https://www.tmog.org/"
+                ],
+                "Retrieved": "2026-08-23"
+            }
+        },
+        {
+            "Id": "verse-lang/verse",
+            "Type": "Application",
+            "Description": "The Verse Programming Language. Statically typed, concise syntax, classes, templates, const-correctness, semi-functional style.",
+            "Link": {
+                "Url": [
+                    "https://github.com/verse-lang/verse",
+                    "https://verselang.github.io/"
+                ],
+                "Retrieved": "2026-08-15"
+            }
+        },
+        {
             "Id": "elvinova/LaFrance",
             "Type": "Typeface",
             "Description": "La france is a simple cursive font, rustic font perfect for branding projects, home ware designs, product packaging or simply as a stylish text overlay to any background image or posters.",
@@ -303,6 +336,7 @@
         },
         {
             "Id": "VoidStar/filepilot",
+            "Tag": "#fpilot",
             "Type": "Application",
             "Description": "Next-gen file explorer.",
             "Link": {

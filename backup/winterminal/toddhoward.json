@@ -193,7 +193,7 @@
                 "source": "VSDebugConsole"
             },
             {
-                "backgroundImage": null,
+                "backgroundImage": "",
                 "backgroundImageOpacity": 1,
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "cursorColor": "#000000",
